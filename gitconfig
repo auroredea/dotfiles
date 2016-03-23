@@ -1,0 +1,8 @@
+[commit]
+  template = ~/dotfiles/gitmessage.txt
+
+[include]
+  path = ~/.gitconfig.local
+
+[push]
+  default = current
