@@ -1,5 +1,5 @@
 [commit]
-  template = ~/dotfiles/gitmessage.txt
+  template = ~/.dotfiles/gitmessage.txt
 
 [include]
   path = ~/.gitconfig.local

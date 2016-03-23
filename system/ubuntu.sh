@@ -29,17 +29,16 @@ git clone https://github.com/Anthony25/gnome-terminal-colors-solarized \
   $SOLARIZED/gnome-terminal-colors-solarized
 git clone https://github.com/seebi/dircolors-solarized \
   $SOLARIZED/dircolors-solarized
-git clone git://github.com/altercation/vim-colors-solarized.git \
+git clone https://github.com/altercation/vim-colors-solarized.git \
   $SOLARIZED/vim-colors-solarized
 
 # Clone this repo and change to its directory
-git clone https://github.com/auroredea/dotfiles $HOME/dotfiles
-cd $HOME/dotfiles || exit
+#git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
+cd $HOME/.dotfiles || exit
 
 # Install Pathogen
-mkdir -p $HOME/.vim
-mkdir -p $HOME/.vim/bundle
-git clone https://github.com/tpope/vim-pathogen $HOME/.vim/autoload
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # symlink it up!
 ./system/symlink_setup.sh
