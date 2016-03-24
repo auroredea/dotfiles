@@ -4,12 +4,14 @@
 
 Issue: #
 #
-# 50-character subject line
+# 50-caractères de message par ligne, en anglais.
 #
-# 72-character wrapped longer description. This should answer:
+# 72 caractères pour les plus longues descriptions. Elle répond aux questions:
 #
-# * Why was this change necessary?
-# * How does it address the problem?
-# * Are there any side effects?
+# * Pourquoi ce changement était nécessaire?
+# * Comment il répond au problème?
+# * Est-ce qu'il y a des effets de bord?
 #
-# Include a link to the ticket, if any.
+# Inclure un lien vers le ticket, si besoin.
+# On peut aussi ajouter des emoji :yes:
+# Mettre "fix #{num}" pour fermer une issue.
