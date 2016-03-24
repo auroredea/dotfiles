@@ -35,9 +35,11 @@ git clone https://github.com/altercation/vim-colors-solarized.git \
   $SOLARIZED/vim-colors-solarized
 
 # Adding diff-so-fancy for git log
-git clone https://github.com/git/git/tree/master/contrib/diff-highlight $HOME/$BINN/diff-highlight
+# See https://github.com/git/git/tree/master/contrib/diff-highlight
+sudo ln -sf /usr/share/doc/git/contrib/diff-highlight/diff-highlight /bin/
+sudo chmod +x /bin/diff-highlight
 git clone https://github.com/so-fancy/diff-so-fancy $HOME/$BINN/diff-so-fancy
-echo "\n*** Don't forget to add $BINN/diff-highlight and $BINN/diff-highlight to the PATH"
+echo "\n*** Don't forget to add $BINN/diff-highlight to the PATH"
 
 # Clone this repo and change to its directory
 #git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
