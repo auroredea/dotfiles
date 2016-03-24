@@ -21,3 +21,7 @@ cd $SOLARIZED/gnome-terminal-colors-solarized || exit
 
 # dircolors Solarized
 ln -sf $SOLARIZED/dircolors-solarized/dircolors.ansi-light $HOME/.dircolors
+
+# vim solarized
+cd $HOME/.vim/bundle || exit
+ln -sf $SOLARIZED/vim-colors-solarized vim-colors-solarized
