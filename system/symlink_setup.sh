@@ -15,6 +15,9 @@ ln -sf $DOTFILES/vimrc $HOME/.vimrc
 # git
 ln -sf $DOTFILES/gitconfig $HOME/.gitconfig
 
+# zsh
+ln -sf $DOTFILES/zshrc $HOME/.zshrc
+
 # Gnome Colors Solarized
 cd $SOLARIZED/gnome-terminal-colors-solarized || exit
 ./set_light.sh
