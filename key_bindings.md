@@ -1,21 +1,42 @@
 # Key bindings
 
-*Discalimer: Some of the list bindings may not come as default with any VIM program*
-
-The present file contains some of the vim and tmux key bindings that I've came
-across along the time.
+*Disclaimer : Partie écrite en français. Ces contrôles fonctionnent chez moi mais il peut y avoir quelques différences avec vos systèmes respectifs.
+* Ces commandes sont parfois définies dans mon `.vimrc.local`
 
 ## VIM
 
-### Cursor movement
-
-In command mode.
-
-#### Moving one character at a time
+### Commandes d'ouverture
 
 Key | Description
 :---: | ---
-<kbd>h</kbd> | move cursor left
-<kbd>l</kbd> | move cursor right
-<kbd>j</kbd> | move cursor down
-<kbd>k</kbd> | move cursor up
+<kbd>i</kbd> | mode insertion sous le curseur
+<kbd>a</kbd> | mode insertion après le curseur 
+<kbd>o</kbd> | mode insertion une ligne en-dessous
+<kbd>O</kbd> | mode insertion une ligne au-dessus
+<kbd>v</kbd> | mode visuel 
+<kbd>R</kbd> | mode remplacement
+<kbd>;</kbd><kbd>;</kbd> | mode normal (redéfini avec <kbd>Echap</kbd>)
+
+### Commandes d'enregistrement
+
+Key | Description
+:---: | ---
+`:w` | enregistrer
+`:q` | quitter 
+`:sav <fic>` | sauvegarder sous
+`:enew` | nouveau fichier
+
+### Copier Coller
+
+Key | Description
+:---: | ---
+<kbd>d</kbd><kbd>d</kbd> | couper la ligne
+<kbd>x</kbd> | couper le caractère sous le curseur
+<kbd>p</kbd> | coller après le curseur
+<kbd>P</kbd> | coller avant le curseur
+<kbd>y</kbd><kbd>y</kbd><kbd>p</kbd>| dupliquer la ligne 
+<kbd>y</kbd> | copier la sélection
+<kbd>o</kbd><kbd>Ctrl</kbd>+<kbd>r</kbd><kbd>"</kbd> | coller dans une nouvelle ligne en-dessous
+<kbd>O</kbd><kbd>Ctrl</kbd>+<kbd>r</kbd><kbd>"</kbd> | coller dans une nouvelle ligne en-dessus
+<kbd>"</kbd><kbd>+</kbd><kbd>y</kbd> | copier dans le buffer (mode visuel)
+<kbd>Ctrl</kbd>+<kbd>r</kbd><kbd>+</kbd> | coller dans le buffer (mode insertion)
