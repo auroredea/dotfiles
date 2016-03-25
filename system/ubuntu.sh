@@ -24,6 +24,7 @@ apt-get remove vim-tiny
 apt-get install vim
 
 # Install zsh and oh-my-zsh
+apt-get install fonts-powerline #prevents font problems
 apt-get install zsh
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL \
