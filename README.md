@@ -18,6 +18,7 @@ sh -c "$(curl -fsSL \
 * [Vim](http://www.vim.org/) as your core editor
 * [Pathogen](https://github.com/tpope/vim-pathogen) as your core plugin manager for Vim.
 * [Zsh](http://www.zsh.org/) as your shell
+* [Oh-my-zsh](http://ohmyz.sh/) as your zsh framework
 
 ## Local Settings
 This configuration can be extended or overriden to suit user-specific
