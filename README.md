@@ -26,6 +26,7 @@ requirements. You can use my own [local settings](https://github.com/auroredea/d
 * `~/.gitconfig.local`
 * `~/.vimrc.local`
 * `~/.aliases.local`
+* `~/.zshrc.local`
 
 If it exists in your `$HOME`, each of these files will be automatically included.
 
