@@ -1,6 +1,8 @@
 autoload -U compinit
 compinit -i
 
+ZSH_THEME="bira"
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -22,7 +24,6 @@ alias gitco='git checkout'
 alias gitpl='git pull'
 alias gitps='git push'
 
-ZSH_THEME="bira"
 
 # Define custom aliases
 [ -f ~/.aliases.local ] && source ~/.aliases.local
