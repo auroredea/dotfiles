@@ -1,0 +1,27 @@
+[user]
+		name = auroredea
+		email = auroredeamaral@gmail.com
+[color]
+		branch = true
+		ui = true
+		diff = true
+		status = true
+[alias]
+		lg = log --graph --full-history --all --color \
+				--pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%ad|%s" --date=short
+		ls = branch -a
+		nb = checkout -b
+		revert = checkout --
+		shl = show --pretty="format:" --name-only --abbrev-commit #nom des fichiers committés
+		shv = show --cc --abbrev-commit #différences entre les derniers fichiers
+		conflict = diff --diff-filter=U
+		cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
+		uncommit = reset --soft HEAD^ #annuler le dernier commit
+		unstage = reset HEAD #retirer de l'index (dé-add)
+[help]
+		autocorrect = 1
+[push]
+	default = matching
+[core]
+	autocrlf = input
+	pager = diff-so-fancy | less --tabs=1,5 -R

@@ -1,0 +1,65 @@
+" VIM Configuration - Aurore de Amaral
+set shiftwidth=2     " Indentation à deux espaces
+set tabstop=2        " Indentation à deux espaces
+
+" Les ; sont rarement utilisés les uns à la suite des autres, remplace <echap>
+imap ;; <Esc>
+map ;; <Esc>
+
+" Actication recherche de nom de fichier
+let g:ctrlp_map = "<leader>s"
+" Ctrlp recherche en priorite dans /home
+let g:ctrlp_working_path_mode = 'cr'
+let g:ctrlp_show_hidden = 1
+
+" Afficher les espaces
+set list lcs=trail:·,precedes:«,extends:»,eol:↲,tab:»·
+
+" Eviter que le fuzzy matching ne regarde dans les fichiers non voulus
+set wildignore+=*/tmp/*,*.so,*.swp,*.o,*.obj,*.rbc,*.zip,*.pyc,*.class,*.jar,*.exe,*.so,*.dll,*/target/*,*/output/*,*.cache,*/classes/*,*/out/*
+
+" Parametres par defaut pour ack
+let g:ackprg="ack -H --nocolor --nogroup --column"
+" Place un marqueur et cherche
+nmap <leader>j mA:Ack<space>
+" Place un marqueur et cherche le mot sous le curseur
+nmap <leader>ja mA:Ack "<C-r>=expand("<cword>")<cr>"
+nmap <leader>jA mA:Ack "<C-r>=expand("<cWORD>")<cr>"
+
+" Plugin Neocomplete
+let g:neocomplete#enable_at_startup = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Selectionne automatiquement la premiere reponse
+let g:neocomplete#enable_auto_select = 1
+
+" Insere automatiquement la paranthese de fin
+let g:neocomplete#enable_auto_delimiter = 1
+
+" L'autocompletion de python et ruby ne marche pas bien
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.python = ''
+"let g:neocomplete#sources#omni#input_patterns.ruby = ''
+
+" Plugin vim-ruby
+autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby let g:rubycomplete_load_gemfile = 0
+autocmd FileType ruby let g:ruby_indent_access_modifier_style = 'outdent'
+autocmd FileType ruby compiler ruby
+
+" Activation touche ctrl-espace (pour completion ruby notamment)
+inoremap <Leader>; <C-x><C-o>
+
+
