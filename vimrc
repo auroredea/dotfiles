@@ -34,6 +34,10 @@ set noerrorbells          " Empeche Vim de beeper
 " Active le comportement 'habituel' de la touche retour en arriere
 set backspace=indent,eol,start
 
+" Affiche toujours la barre de statut et la force en mode texte
+set laststatus=2
+set guioptions-=e
+
 " Cache les fichiers lors de l'ouverture d'autres fichiers
 set hidden
 
@@ -49,7 +53,14 @@ filetype indent on
 set background=light
 colorscheme solarized
 
+" Touche mapleader
 let mapleader = ","
+
+" Afficher les espaces
+set list lcs=trail:·,precedes:«,extends:»,eol:↲,tab:»·
+
+" Eviter que le fuzzy matching ne regarde dans les fichiers non voulus
+set wildignore+=*/tmp/*,*.so,*.swp,*.o,*.obj,*.rbc,*.zip,*.pyc,*.class,*.jar,*.exe,*.so,*.dll,*/target/*,*/output/*,*.cache,*/classes/*,*/out/*
 
 " ============================================================================
 " Local Customization

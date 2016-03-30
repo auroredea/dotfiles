@@ -6,30 +6,22 @@ set tabstop=2        " Indentation à deux espaces
 imap ;; <Esc>
 map ;; <Esc>
 
-" Actication recherche de nom de fichier
+" Activation recherche de nom de fichier
 let g:ctrlp_map = "<leader>s"
 " Ctrlp recherche en priorite dans /home
 let g:ctrlp_working_path_mode = 'cr'
 let g:ctrlp_show_hidden = 1
 
-" Afficher les espaces
-set list lcs=trail:·,precedes:«,extends:»,eol:↲,tab:»·
-
-" Eviter que le fuzzy matching ne regarde dans les fichiers non voulus
-set wildignore+=*/tmp/*,*.so,*.swp,*.o,*.obj,*.rbc,*.zip,*.pyc,*.class,*.jar,*.exe,*.so,*.dll,*/target/*,*/output/*,*.cache,*/classes/*,*/out/*
-
-" Parametres par defaut pour ack
-let g:ackprg="ack -H --nocolor --nogroup --column"
-" Place un marqueur et cherche
-nmap <leader>j mA:Ack<space>
-" Place un marqueur et cherche le mot sous le curseur
-nmap <leader>ja mA:Ack "<C-r>=expand("<cword>")<cr>"
-nmap <leader>jA mA:Ack "<C-r>=expand("<cWORD>")<cr>"
+" les archives sont du filetype zip
+au BufRead,BufNewFile *.jar,*.war,*.ear,*.sar,*.rar set filetype=zip
 
 " Plugin Neocomplete
+let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#max_list = 15
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -61,5 +53,4 @@ autocmd FileType ruby compiler ruby
 
 " Activation touche ctrl-espace (pour completion ruby notamment)
 inoremap <Leader>; <C-x><C-o>
-
 
