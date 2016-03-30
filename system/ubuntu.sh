@@ -23,8 +23,11 @@ apt-get install tree
 apt-get remove vim-tiny
 apt-get install vim
 
+# Install ctags (for navigate through source code)
+apt-get install exuberent-ctags
+
 # Install zsh and oh-my-zsh
-apt-get install fonts-powerline #prevents font problems
+# apt-get install fonts-powerline #prevents font problems
 apt-get install zsh
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL \
