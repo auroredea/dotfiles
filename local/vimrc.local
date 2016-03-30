@@ -54,3 +54,7 @@ autocmd FileType ruby compiler ruby
 " Activation touche ctrl-espace (pour completion ruby notamment)
 inoremap <Leader>; <C-x><C-o>
 
+" Add shortcut for searching with CTags and Ctrlp
+" ctags must be already run on your directory (with ctags -R .)
+nnoremap <leader>! :CtrlPTag<cr>
+
