@@ -1,6 +1,6 @@
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/aurore/Applications/scala-2.11.7/bin:/home/aurore/Applications/diff-so-fancy:/home/aurore/Applications/diff-highlight:/home/aurore/Applications/scala-2.11.7/bin:/home/aurore/Applications/diff-so-fancy:/home/aurore/Applications/diff-highlight"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/aurore/Applications/scala-2.11.7/bin:/home/aurore/Applications/diff-so-fancy:/home/aurore/Applications/diff-highlight:/home/aurore/Applications/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
