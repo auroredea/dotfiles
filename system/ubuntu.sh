@@ -26,6 +26,9 @@ apt-get install vim
 # Install ctags (for navigate through source code)
 apt-get install exuberent-ctags
 
+# Install tmux
+apt-get install tmux
+
 # Install zsh and oh-my-zsh
 # apt-get install fonts-powerline #prevents font problems
 apt-get install zsh
