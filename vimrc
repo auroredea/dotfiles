@@ -55,9 +55,16 @@ colorscheme solarized
 
 " Touche mapleader
 let mapleader = ","
+" Les ; sont rarement utilisés les uns à la suite des autres, remplace <echap>
+imap ;; <Esc>
+map ;; <Esc>
 
 " Afficher les espaces
 set list lcs=trail:·,precedes:«,extends:»,eol:↲,tab:»·
+" Tabulation à deux espaces, permet :retab des tabs -> espaces
+set shiftwidth=2     " Indentation à deux espaces
+set tabstop=2        " Indentation à deux espaces
+set expandtab
 
 " Eviter que le fuzzy matching ne regarde dans les fichiers non voulus
 set wildignore+=*/tmp/*,*.so,*.swp,*.o,*.obj,*.rbc,*.zip,*.pyc,*.class,*.jar,*.exe,*.so,*.dll,*/target/*,*/output/*,*.cache,*/classes/*,*/out/*

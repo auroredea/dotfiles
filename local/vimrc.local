@@ -1,10 +1,4 @@
 " VIM Configuration - Aurore de Amaral
-set shiftwidth=2     " Indentation à deux espaces
-set tabstop=2        " Indentation à deux espaces
-
-" Les ; sont rarement utilisés les uns à la suite des autres, remplace <echap>
-imap ;; <Esc>
-map ;; <Esc>
 
 " Activation recherche de nom de fichier
 let g:ctrlp_map = "<leader>s"
