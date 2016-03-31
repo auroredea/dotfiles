@@ -1,5 +1,4 @@
 " VIM Configuration - Aurore de Amaral
-
 " Activation recherche de nom de fichier
 let g:ctrlp_map = "<leader>s"
 " Ctrlp recherche en priorite dans /home
@@ -37,6 +36,12 @@ endif
 let g:neocomplete#sources#omni#input_patterns.python = ''
 "let g:neocomplete#sources#omni#input_patterns.ruby = ''
 
+" Recommended key-mappings.
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" Close popup by <Space>.
+inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
+
 " Plugin vim-ruby
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
@@ -52,3 +57,14 @@ inoremap <Leader>; <C-x><C-o>
 " ctags must be already run on your directory (with ctags -R .)
 nnoremap <leader>! :CtrlPTag<cr>
 
+" insert this line above imap
+call lexima#init()
+
+function! CleverCr()
+  "if neosnippet#expandable()
+  "  return "\<Plug>(neosnippet_expand_or_jump)"
+  "else
+    return "\<C-y>"
+  "endif
+endfunction
+inoremap <expr> <cr> pumvisible() ? CleverCr() : lexima#expand('<lt>CR>', 'i')
