@@ -19,6 +19,7 @@ sh -c "$(curl -fsSL \
 * [Pathogen](https://github.com/tpope/vim-pathogen) as your core plugin manager for Vim.
 * [Zsh](http://www.zsh.org/) as your shell
 * [Oh-my-zsh](http://ohmyz.sh/) as your zsh framework
+* [Tmux](https://tmux.github.io/) as your mmultiplexer terminal.
 
 ## Local Settings
 This configuration can be extended or overriden to suit user-specific
