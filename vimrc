@@ -49,7 +49,7 @@ filetype on
 filetype plugin on
 filetype indent on
 
-" Utilise la version sombre de Solarized
+" Utilise la version claire de Solarized
 set background=light
 colorscheme solarized
 
