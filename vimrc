@@ -30,6 +30,7 @@ set hlsearch              " Surligne les resultats de recherche
 " -- Beep
 set visualbell            " Empeche Vim de beeper
 set noerrorbells          " Empeche Vim de beeper
+set t_vb=                 " Empeche le blinking
 
 " Active le comportement 'habituel' de la touche retour en arriere
 set backspace=indent,eol,start
