@@ -1,5 +1,2 @@
-#ruby documentation (ri ne va pas sur la bonne version - ruby2.2 installé via les packages)
-alias ri='ri -d /usr/share/ri/2.2.0/system'
-
 #rm supprimer automatiquement le dossier quand on veut supprimer un dossier
 alias rm='rm -r'
