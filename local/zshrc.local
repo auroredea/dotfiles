@@ -6,6 +6,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/g
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
 
+alias gitl='git l'
 alias gitlg='git lg'
 alias gitls='git ls'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)

@@ -8,10 +8,9 @@
 		status = true
 [alias]
 		ls = branch -a
-		lg = log --graph --full-history --all --color \
+    lg = log --name-status --oneline
+		l = log --graph --full-history --all --color \
 				--pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%ad|%s" --date=short
-		shl = show --pretty="format:" --name-only --abbrev-commit #nom des fichiers committés
-		shv = show --cc --abbrev-commit #différences entre les derniers fichiers
 		conflict = diff --diff-filter=U
 		cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
 		uncommit = reset --soft HEAD^ #annuler le dernier commit
