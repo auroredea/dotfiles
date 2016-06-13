@@ -1,12 +1,6 @@
 
 
-
-
-Issue: #
-#
 # 50-caractères de message par ligne, en anglais (verbe au présent, ce que le commit fait).
-# Si on est sur une branche privée qu'on veut merge sur master, penser au rebase : git rebase -i master
-# Pour le cherry-pick, commentaire automatique avec : git cherry-pick -x sha-1 
 #
 # 72 caractères pour les plus longues descriptions. Elle répond aux questions:
 #
