@@ -4,9 +4,15 @@ let g:ctrlp_map = "<leader>s"
 " Ctrlp recherche en priorite dans /home
 let g:ctrlp_working_path_mode = 'cr'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_user_command = 'find %s -type f'
 
 " les archives sont du filetype zip
 au BufRead,BufNewFile *.jar,*.war,*.ear,*.sar,*.rar set filetype=zip
+
+let g:netrw_liststyle = 3
+let g:netrw_winsize   = 15
+let g:netrw_banner = 0
+nmap <leader>d :Lex<CR> " This will toggle the file explorer on/off
 
 " Plugin Neocomplete
 let g:acp_enableAtStartup = 0
