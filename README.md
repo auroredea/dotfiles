@@ -19,7 +19,7 @@ sh -c "$(curl -fsSL \
 * [Pathogen](https://github.com/tpope/vim-pathogen) as your core plugin manager for Vim.
 * [Zsh](http://www.zsh.org/) as your shell
 * [Oh-my-zsh](http://ohmyz.sh/) as your zsh framework
-* [Tmux](https://tmux.github.io/) as your mmultiplexer terminal.
+* [Tmux](https://tmux.github.io/) as your multiplexer terminal.
 
 ## Local Settings
 This configuration can be extended or overriden to suit user-specific
@@ -29,7 +29,7 @@ requirements. You can use my own [local settings](https://github.com/auroredea/d
 * `~/.aliases.local`
 * `~/.zshrc.local`
 
-If it exists in your `$HOME`, each of these files will be automatically included.
+If it already exists in your `$HOME`, each of these files will be automatically included.
 
 ## Key bindings
 The set of key bindings that come as default with this package are specified in the [key bindings](https://github.com/auroredea/dotfiles/blob/master/key_bindings.md)
