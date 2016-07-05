@@ -18,9 +18,6 @@ ln -sf $DOTFILES/gitconfig $HOME/.gitconfig
 # zsh
 ln -sf $DOTFILES/zshrc $HOME/.zshrc
 
-# tmux
-ln -sf $DOTFILES/tmux.conf $HOME/.tmux.conf
-
 # Gnome Colors Solarized
 cd $SOLARIZED/gnome-terminal-colors-solarized || exit
 ./set_light.sh
@@ -40,6 +37,7 @@ function localfiles {
  ln -s $DOTFILES/local/gitconfig.local $HOME/.gitconfig.local
  ln -s $DOTFILES/local/vimrc.local $HOME/.vimrc.local
  ln -s $DOTFILES/local/zshrc.local $HOME/.zshrc.local
+ ln -s $DOTFILES/local/terminator.local $HOME/.config/terminator/config
  echo "local files installed"
 }
 
@@ -48,6 +46,6 @@ while true; do
     case $yn in
         [Yy]* ) localfiles; break;;
         [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
+        * ) echo "Please answer [y]es or [n]o.";;
     esac
 done
