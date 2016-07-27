@@ -8,9 +8,10 @@
   suppress_multiple_term_dialog = True
   tab_position = bottom
   title_hide_sizetext = True
-  title_inactive_bg_color = "#000000"
-  title_inactive_fg_color = "#616161"
-  title_receive_bg_color = "#000000"
+  title_inactive_bg_color = "#fdf6e3"
+  title_inactive_fg_color = "#484848"
+  title_receive_bg_color = "#fdf6e3"
+  title_receive_fg_color = "#484848"
   title_transmit_bg_color = "#000000"
   window_state = maximise
 [keybindings]
@@ -18,6 +19,7 @@
   [[default]]
     [[[child0]]]
       fullscreen = False
+      last_active_term = 42a1f3a3-cf03-43bb-8448-2dcbc0ed0670
       last_active_window = True
       maximised = True
       order = 0
@@ -27,132 +29,85 @@
       title = Main
       type = Window
     [[[child1]]]
-      active_page = 3
-      labels = None, None, None, None
-      last_active_term = 464c8d17-6ae3-4067-83bc-aaaefaf580e7, 597d1505-323a-4842-9bd9-4f24596df060, 593b851c-895f-4c8e-b9ba-e8c68c157e36, 7e93ec7d-5c99-4f71-b7c3-e8d3a2a43cb3
       order = 0
       parent = child0
-      type = Notebook
-    [[[child12]]]
-      order = 2
+      position = 462
+      ratio = 0.624156545209
+      type = VPaned
+    [[[child3]]]
+      order = 1
       parent = child1
       position = 682
       ratio = 0.499633967789
       type = HPaned
-    [[[child15]]]
-      order = 3
-      parent = child1
-      position = 682
-      ratio = 0.499633967789
-      type = HPaned
-    [[[child17]]]
-      order = 1
-      parent = child15
-      position = 464
-      ratio = 0.64965034965
-      type = VPaned
-    [[[child2]]]
+    [[[terminal2]]]
       order = 0
       parent = child1
-      position = 614
-      ratio = 0.449853587116
-      type = HPaned
-    [[[child4]]]
-      order = 1
-      parent = child2
-      position = 543
-      ratio = 0.76013986014
-      type = VPaned
-    [[[child7]]]
-      order = 1
-      parent = child1
-      position = 840
-      ratio = 0.615300146413
-      type = HPaned
-    [[[child8]]]
+      profile = default
+      type = Terminal
+      uuid = 42a1f3a3-cf03-43bb-8448-2dcbc0ed0670
+    [[[terminal4]]]
       order = 0
-      parent = child7
-      position = 604
-      ratio = 0.845454545455
-      type = VPaned
-    [[[terminal10]]]
-      command = (cd ~/Dev/www/; zsh)
-      order = 1
-      parent = child8
+      parent = child3
       profile = default
       type = Terminal
-      uuid = 45f8ec3d-40c0-4034-970e-de45fbf39bad
-    [[[terminal11]]]
-      command = (cd ~/Dev/www/; zsh)
-      order = 1
-      parent = child7
-      profile = default
-      type = Terminal
-      uuid = 597d1505-323a-4842-9bd9-4f24596df060
-    [[[terminal13]]]
-      command = (cd ~/Téléchargements/Tweets; zsh)
-      order = 0
-      parent = child12
-      profile = default
-      type = Terminal
-      uuid = d44bc9de-631f-4314-93b4-73760bf0c799
-    [[[terminal14]]]
-      command = (cd ~/Dev/Tinker/; zsh)
-      order = 1
-      parent = child12
-      profile = default
-      type = Terminal
-      uuid = 593b851c-895f-4c8e-b9ba-e8c68c157e36
-    [[[terminal16]]]
-      order = 0
-      parent = child15
-      profile = default
-      type = Terminal
-      uuid = 7e93ec7d-5c99-4f71-b7c3-e8d3a2a43cb3
-    [[[terminal18]]]
-      order = 0
-      parent = child17
-      profile = default
-      type = Terminal
-      uuid = 2020332c-c6c9-4a2b-81a1-6f73e540c498
-    [[[terminal19]]]
-      order = 1
-      parent = child17
-      profile = default
-      type = Terminal
-      uuid = 5c9ad333-f7f4-4f67-94c0-3b6e22ddb748
-    [[[terminal3]]]
-      order = 0
-      parent = child2
-      profile = default
-      type = Terminal
-      uuid = 464c8d17-6ae3-4067-83bc-aaaefaf580e7
+      uuid = a377862d-44a6-46a3-ad98-45e7872f7ab9
     [[[terminal5]]]
       command = htop
-      order = 0
-      parent = child4
-      profile = default
-      type = Terminal
-      uuid = b8057087-4dd9-401c-9370-2d1720316d1d
-    [[[terminal6]]]
-      command = (cd ~/Dev/www/; zsh)
       order = 1
-      parent = child4
+      parent = child3
       profile = default
       type = Terminal
-      uuid = baf317d8-06f8-497a-960b-7deba4e64c6d
-    [[[terminal9]]]
-      command = (~/Dev/www/; vim)
+      uuid = 64812bc0-234b-43ff-af76-617851341c2c
+  [[Oneonly]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 42a1f3a3-cf03-43bb-8448-2dcbc0ed0670
+      last_active_window = True
+      maximised = True
       order = 0
-      parent = child8
+      parent = ""
+      position = 0:27
+      size = 1366, 741
+      title = aurore@SATELLITE: ~
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 462
+      ratio = 0.624156545209
+      type = VPaned
+    [[[child3]]]
+      order = 1
+      parent = child1
+      position = 682
+      ratio = 0.499633967789
+      type = HPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
       profile = default
       type = Terminal
-      uuid = b7e68ae7-079d-41cc-8d74-d5c516839b06
+      uuid = 42a1f3a3-cf03-43bb-8448-2dcbc0ed0670
+    [[[terminal4]]]
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = a377862d-44a6-46a3-ad98-45e7872f7ab9
+    [[[terminal5]]]
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 64812bc0-234b-43ff-af76-617851341c2c
 [plugins]
 [profiles]
   [[default]]
     background_color = "#fdf6e3"
     background_image = None
+    cursor_color = "#002b36"
+    font = DejaVu Sans Mono 10
     foreground_color = "#657b83"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    show_titlebar = False
+    use_system_font = False
