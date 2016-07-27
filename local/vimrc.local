@@ -1,4 +1,9 @@
 " VIM Configuration - Aurore de Amaral
+
+set showmatch " Sélectionne la paranthese correspondante ouvrante ou fermante
+set guifont=Menlo " Utilise la font Menlo
+set lines=45 columns=130 "Ouvre le GUI avec une taille déterminée
+
 " Activation recherche de nom de fichier
 let g:ctrlp_map = "<leader>s"
 " Ctrlp recherche en priorite dans /home
@@ -9,68 +14,14 @@ let g:ctrlp_user_command = 'find %s -type f'
 " les archives sont du filetype zip
 au BufRead,BufNewFile *.jar,*.war,*.ear,*.sar,*.rar set filetype=zip
 
-let g:netrw_liststyle = 3
-let g:netrw_winsize   = 15
-let g:netrw_banner = 0
-nmap <leader>d :Lex<CR> " This will toggle the file explorer on/off
+" Plugin NerdTREE (explorateur de fichier)
+map <leader>d :NERDTreeToggle<CR> " explorer on/off
+nmap <leader>j :NERDTreeFind<CR>  " locate the file open
+autocmd VimEnter * NERDTree       " always display it, but not focus it
+autocmd VimEnter * wincmd p
+let NERDTreeIgnore=['tmp', '\.so', '\.o', '\.obj', '\.zip', '\.tar', '\.pyc', '\.rbc', '\.class', '\.exe', '\.dll', '\.cache', '\.DS_Store', '\~$', '\.swp'] " wildcards files
+let NERDTreeShowHidden=1
 
-" Plugin Neocomplete
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#max_list = 15
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" Selectionne automatiquement la premiere reponse
-let g:neocomplete#enable_auto_select = 1
-
-" Insere automatiquement la paranthese de fin
-let g:neocomplete#enable_auto_delimiter = 1
-
-" L'autocompletion de python et ruby ne marche pas bien
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
-let g:neocomplete#sources#omni#input_patterns.python = ''
-"let g:neocomplete#sources#omni#input_patterns.ruby = ''
-
-" Recommended key-mappings.
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" Close popup by <Space>.
-inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-
-" Plugin vim-ruby
-autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
-autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-autocmd FileType ruby let g:rubycomplete_load_gemfile = 0
-autocmd FileType ruby let g:ruby_indent_access_modifier_style = 'outdent'
-autocmd FileType ruby compiler ruby
-
-" Activation touche ctrl-espace (pour completion ruby notamment)
-inoremap <Leader>; <C-x><C-o>
-
-" Add shortcut for searching with CTags and Ctrlp
-" ctags must be already run on your directory (with ctags -R .)
-nnoremap <leader>! :CtrlPTag<cr>
-
-" insert this line above imap
-call lexima#init()
-
-function! CleverCr()
-  "if neosnippet#expandable()
-  "  return "\<Plug>(neosnippet_expand_or_jump)"
-  "else
-    return "\<C-y>"
-  "endif
-endfunction
-inoremap <expr> <cr> pumvisible() ? CleverCr() : lexima#expand('<lt>CR>', 'i')
+" Plugin Lexima (auto encapsulation)
+let g:lexima_enable_endwise_rules = 1
+let g:lexima_enable_newline_rules = 1

@@ -51,6 +51,8 @@ filetype plugin on
 filetype indent on
 
 " Utilise la version claire de Solarized
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
 set background=light
 colorscheme solarized
 
@@ -68,7 +70,7 @@ set tabstop=2        " Indentation à deux espaces
 set expandtab
 
 " Eviter que le fuzzy matching ne regarde dans les fichiers non voulus
-set wildignore+=*/tmp/*,*.so,*.swp,*.o,*.obj,*.rbc,*.zip,*.pyc,*.class,*.jar,*.exe,*.so,*.dll,*/target/*,*/output/*,*.cache,*/classes/*,*/out/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.o,*.obj,*.rbc,*.zip,*.pyc,*.class,*.jar,*.exe,*.so,*.dll,*/target/*,*/output/*,*.cache,*/classes/*,*/out/*,*.log,*.sql,*.cache
 
 " ============================================================================
 " Local Customization
