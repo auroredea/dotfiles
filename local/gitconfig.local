@@ -6,15 +6,16 @@
 	ui = true
 	diff = true
 	status = true
+	log = true
 [alias]
 	ls = branch -a
-	lg = log --name-status --oneline
-	l = log --graph --full-history --color --date=short \
-			--pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%ad|%s"
+	lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset'
 	conflict = diff --diff-filter=U
 	cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
 	uncommit = reset --soft HEAD^ #annuler le dernier commit
 	unstage = reset HEAD #retirer de l'index (dé-add)
+	find = "!git ls-files | grep -i --color"
+	grep = grep --color -n
 [help]
 	autocorrect = 1
 [push]

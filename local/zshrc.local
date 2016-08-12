@@ -6,7 +6,6 @@ export PATH="/usr/local/opt/rbenv/bin:/usr/local/opt/rbenv/libexec:/usr/local/op
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
 
-alias gitl='git l'
 alias gitlg='git lg'
 alias gitls='git ls'
 
