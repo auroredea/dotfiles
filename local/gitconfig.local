@@ -1,25 +1,25 @@
 [user]
-		name = auroredea
-		email = aurore@deamaral.fr
+	name = auroredea
+	email = aurore@deamaral.fr
 [color]
-		branch = true
-		ui = true
-		diff = true
-		status = true
+	branch = true
+	ui = true
+	diff = true
+	status = true
 [alias]
-		ls = branch -a
-    lg = log --name-status --oneline
-		l = log --graph --full-history --all --color \
-				--pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%ad|%s" --date=short
-		conflict = diff --diff-filter=U
-		cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
-		uncommit = reset --soft HEAD^ #annuler le dernier commit
-		unstage = reset HEAD #retirer de l'index (dé-add)
+	ls = branch -a
+	lg = log --name-status --oneline
+	l = log --graph --full-history --color --date=short \
+			--pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%ad|%s"
+	conflict = diff --diff-filter=U
+	cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
+	uncommit = reset --soft HEAD^ #annuler le dernier commit
+	unstage = reset HEAD #retirer de l'index (dé-add)
 [help]
-		autocorrect = 1
+	autocorrect = 1
 [push]
 	default = matching
 [core]
 	autocrlf = input
 	pager = diff-so-fancy | less --tabs=1,5 -R
-  editor = vim -u NONE
+	editor = vim -u NONE
