@@ -8,9 +8,10 @@ export LANG=fr_FR.UTF-8
 
 alias gitlg='git lg'
 alias gitls='git ls'
-
+alias gitl='git l'
 #svim is for large files, better than vi
 alias svim='vim -u NONE'
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
