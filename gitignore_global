@@ -25,6 +25,7 @@ fabric.properties
 Session.vim
 .netrwhist
 tags
+*.swp
 
 # SBT
 /target/
