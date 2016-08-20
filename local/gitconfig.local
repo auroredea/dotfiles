@@ -9,7 +9,8 @@
 	log = true
 [alias]
 	ls = branch -a
-	lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset'
+	lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers
+	l = log --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #branche courante sans modification de fichier
 	conflict = diff --diff-filter=U
 	cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
 	uncommit = reset --soft HEAD^ #annuler le dernier commit
