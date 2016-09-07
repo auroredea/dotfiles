@@ -1,8 +1,9 @@
 " VIM Configuration - Aurore de Amaral
 
 set showmatch " Sélectionne la paranthese correspondante ouvrante ou fermante
-set guifont=Menlo " Utilise la font Menlo
+"set guifont=Menlo " Utilise la font Menlo
 set lines=45 columns=130 "Ouvre le GUI avec une taille déterminée
+colorscheme darcula
 
 " Activation recherche de nom de fichier
 let g:ctrlp_map = "<leader>s"
