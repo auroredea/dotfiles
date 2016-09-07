@@ -1,6 +1,7 @@
 autoload -U compinit
 compinit -i
 
+DISABLE_UPDATE_PROMPT=true
 ZSH_THEME="bira"
 
 # Path to your oh-my-zsh installation.
