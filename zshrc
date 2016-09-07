@@ -2,7 +2,7 @@ autoload -U compinit
 compinit -i
 
 DISABLE_UPDATE_PROMPT=true
-ZSH_THEME="bira"
+ZSH_THEME="robbyrussell"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
