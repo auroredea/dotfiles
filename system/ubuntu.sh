@@ -13,15 +13,15 @@ while true; do -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 apt update
 
 # Install useful binaries
-apt install git
-apt install tree
+apt -y install git
+apt -y install tree
 
 # Install more recent version of Vim
 apt remove vim-tiny
-apt install vim
+apt -y install vim
 
 # Install zsh and oh-my-zsh
-apt install zsh
+apt -y install zsh
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL \
   https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
