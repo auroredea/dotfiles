@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ################################
-# TESTED WITH UBUNTU 15.10 LTS #
+# TESTED WITH UBUNTU 16.04 LTS #
 ################################
 
 $BINN=Applications
@@ -13,39 +13,27 @@ sudo -v
 while true; do -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Get information on the newest versions of packages and their dependencies.
-apt-get update
+apt update
 
 # Install useful binaries
-apt-get install git
-apt-get install tree
+apt install git
+apt install tree
 
 # Install more recent version of Vim
-apt-get remove vim-tiny
-apt-get install vim
+apt remove vim-tiny
+apt install vim
 
 # Install ctags (for navigate through source code)
-apt-get install exuberent-ctags
-
-# Install terminator
-apt-get install terminator
+apt install exuberent-ctags
 
 # Install zsh and oh-my-zsh
-# apt-get install fonts-powerline #prevents font problems
-apt-get install zsh
+apt install zsh
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL \
   https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Create a folder to hold all the solarized color schemes
 mkdir -p ${SOLARIZED:=$HOME/.solarized}
-
-# Download solarized color schemes
-git clone https://github.com/Anthony25/gnome-terminal-colors-solarized \
-  $SOLARIZED/gnome-terminal-colors-solarized
-git clone https://github.com/seebi/dircolors-solarized \
-  $SOLARIZED/dircolors-solarized
-git clone https://github.com/altercation/vim-colors-solarized.git \
-  $SOLARIZED/vim-colors-solarized
 
 # Adding diff-so-fancy for git log
 # See https://github.com/git/git/tree/master/contrib/diff-highlight
@@ -55,7 +43,7 @@ git clone https://github.com/so-fancy/diff-so-fancy $HOME/$BINN/diff-so-fancy
 echo "\n*** Don't forget to add $BINN/diff-highlight to the PATH"
 
 # Clone this repo and change to its directory
-#git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
+git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
 cd $HOME/.dotfiles || exit
 
 # Install Pathogen

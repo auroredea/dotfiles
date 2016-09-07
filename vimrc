@@ -50,12 +50,6 @@ filetype on
 filetype plugin on
 filetype indent on
 
-" Utilise la version claire de Solarized
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-set background=light
-colorscheme solarized
-
 " Touche mapleader
 let mapleader = ","
 " Les ; sont rarement utilisés les uns à la suite des autres, remplace <echap>

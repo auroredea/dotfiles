@@ -1,12 +1,11 @@
 #!/bin/bash
 
 ################################
-# TESTED WITH UBUNTU 15.10 LTS #
+# TESTED WITH UBUNTU 16.04 LTS #
 ################################
 
 echo "\n*** Creating symlinks..."
 
-SOLARIZED=$HOME/.solarized
 DOTFILES=$HOME/.dotfiles
 
 # vim
@@ -19,27 +18,13 @@ ln -sf $DOTFILES/gitignore_global $HOME/.gitignore_global
 # zsh
 ln -sf $DOTFILES/zshrc $HOME/.zshrc
 
-# Gnome Colors Solarized
-cd $SOLARIZED/gnome-terminal-colors-solarized || exit
-./set_light.sh
-
-# dircolors Solarized
-ln -sf $SOLARIZED/dircolors-solarized/dircolors.ansi-light $HOME/.dircolors
-
-# vim solarized
-cd $HOME/.vim/bundle || exit
-ln -sf $SOLARIZED/vim-colors-solarized vim-colors-solarized
-
 # adding local files ?
-
 function localfiles {
  cd $HOME
  ln -s $DOTFILES/local/aliases.local $HOME/.aliases.local
  ln -s $DOTFILES/local/gitconfig.local $HOME/.gitconfig.local
  ln -s $DOTFILES/local/vimrc.local $HOME/.vimrc.local
  ln -s $DOTFILES/local/zshrc.local $HOME/.zshrc.local
- cd $HOME/.config/terminator
- ln -s $DOTFILES/local/terminator.local config
  echo "local files installed"
 }
 
