@@ -4,7 +4,7 @@
 # TESTED WITH UBUNTU 16.04 LTS #
 ################################
 
-$BINN=Applications
+export BIN=Applications
 
 # Ask for the administrator password upfront.
 sudo -v
@@ -39,8 +39,8 @@ mkdir -p ${SOLARIZED:=$HOME/.solarized}
 # See https://github.com/git/git/tree/master/contrib/diff-highlight
 sudo ln -sf /usr/share/doc/git/contrib/diff-highlight/diff-highlight /bin/
 sudo chmod +x /bin/diff-highlight
-git clone https://github.com/so-fancy/diff-so-fancy $HOME/$BINN/diff-so-fancy
-echo "\n*** Don't forget to add $BINN/diff-highlight to the PATH"
+git clone https://github.com/so-fancy/diff-so-fancy $HOME/$BIN/diff-so-fancy
+echo "\n*** Don't forget to add $HOME/$BIN/diff-highlight to the PATH"
 
 # Clone this repo and change to its directory
 git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
