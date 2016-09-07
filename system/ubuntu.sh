@@ -20,9 +20,6 @@ apt install tree
 apt remove vim-tiny
 apt install vim
 
-# Install ctags (for navigate through source code)
-apt install exuberent-ctags
-
 # Install zsh and oh-my-zsh
 apt install zsh
 chsh -s $(which zsh)
