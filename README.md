@@ -14,9 +14,8 @@ sh -c "$(curl -fsSL \
 ```
 
 ### What is set up?
-* [Solarized Light](http://ethanschoonover.com/solarized) as the colorscheme for terminal and Vim
 * [Vim](http://www.vim.org/) as your core editor
-* [Pathogen](https://github.com/tpope/vim-pathogen) as your core plugin manager for Vim.
+* [Pathogen](https://github.com/tpope/vim-pathogen) as your core plugin manager for Vim, and some selected vim plugins (optional).
 * [Zsh](http://www.zsh.org/) as your shell
 * [Oh-my-zsh](http://ohmyz.sh/) as your zsh framework
 
