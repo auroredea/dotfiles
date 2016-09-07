@@ -6,7 +6,7 @@
 
 echo "\n*** Creating symlinks..."
 
-DOTFILES=$HOME/.dotfiles
+export DOTFILES=$HOME/.dotfiles
 
 # vim
 ln -sf $DOTFILES/vimrc $HOME/.vimrc
