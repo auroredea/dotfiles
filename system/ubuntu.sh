@@ -17,7 +17,7 @@ apt -y install git
 apt -y install tree
 
 # Install more recent version of Vim
-apt remove vim-tiny
+apt -y remove vim-tiny
 apt -y install vim
 
 # Install zsh and oh-my-zsh
