@@ -1,16 +1,9 @@
 # User configuration
 
-export PATH="/usr/local/opt/rbenv/bin:/usr/local/opt/rbenv/libexec:/usr/local/opt/rbenv/plugins/ruby-build/bin:/home/aurore/.rbenv/versions/2.3.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/aurore/Applications/scala-2.11.7/bin:/home/aurore/Applications/diff-so-fancy:/home/aurore/Applications/diff-highlight:/home/aurore/Applications/bin:/home/aurore/Applications/maven-3.3.9/bin:/home/aurore/Applications/Komodo-IDE-10/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH="$PATH:/home/dev/Applications/diff-so-fancy:/home/dev/stand-alone-tagger/ext/wapiti-1.5.0"
 
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
-
-alias gitlg='git lg'
-alias gitls='git ls'
-alias gitl='git l'
-#svim is for large files, better than vi
-alias svim='vim --noplugin'
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
