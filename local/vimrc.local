@@ -3,7 +3,6 @@
 set showmatch " Sélectionne la paranthese correspondante ouvrante ou fermante
 "set guifont=Menlo " Utilise la font Menlo
 set lines=45 columns=130 "Ouvre le GUI avec une taille déterminée
-colorscheme birds-of-paradise
 
 " Activation recherche de nom de fichier
 let g:ctrlp_map = "<leader>s"
