@@ -8,6 +8,16 @@
 	status = true
 	log = true
 [alias]
+  a = add
+  s = status
+  st = status
+  co = checkout
+  ci = commit
+  cia = commit -a #commit les fichiers indexés
+  sa = stash #add stash
+  sap = stash apply
+  sl = stash list
+  sd = stash drop
 	ls = branch -a
 	lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers
 	l = log --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #branche courante sans modification de fichier
@@ -17,7 +27,18 @@
 	sres = reset HEAD #retirer de l'index/stage (dé-add)
 	find = "!git ls-files | grep -i --color"
 	grep = grep --color -n
-  caa = commit -a --amend C HEAD
+  caa = commit -a --amend -C HEAD #re-commit (efface avant) avec nouveaux fichiers
+  ri = rebase -i #magic system sur ma branche (changer historique)
+  pl = pull
+  ps = push
+  plo = pull origin
+  pso = push origin
+  plu = pull upstream
+  psu = push upstream
+  #résoudre les conflits (accepte une version ou une autre pour tous les fichiers listés)
+  ours = "!f() { git co --ours $@ && git add $@; }; f" #ok branche courante
+  theirs = "!f() { git co --theirs $@ && git add $@; }; f" #ok branche à checkout/merge
+  la = "!git config -l | grep alias | cut -c 7-" #liste les alias
 [help]
 	autocorrect = 1
 [push]

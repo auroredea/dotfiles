@@ -1,10 +1,5 @@
 #rm supprimer automatiquement le dossier quand on veut supprimer un dossier
 alias rm='rm -r'
 
-#git sugar
-alias gitlg='git lg'
-alias gitls='git ls'
-alias gitl='git l'
-
 #svim is for large files, better than vi
 alias svim='vim -u NONE'

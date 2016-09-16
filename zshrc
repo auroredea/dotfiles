@@ -16,19 +16,6 @@ alias egrep='egrep --color=auto'
 alias ll='ls -alhF'
 alias l='ls -CF'
 
-# GIT aliases
-alias gita='git add'
-alias gits='git status'
-alias gitci='git commit'
-alias gitco='git checkout'
-alias gitpl='git pull'
-alias gitplo='git pull origin'
-alias gitplu='git pull upstream'
-alias gitps='git push'
-alias gitpso='git push origin'
-alias gitpsu='git push upstram'
-
-
 # Define custom aliases
 [ -f ~/.aliases.local ] && source ~/.aliases.local
 
