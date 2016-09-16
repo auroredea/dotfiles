@@ -11,12 +11,13 @@
 	ls = branch -a
 	lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers
 	l = log --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #branche courante sans modification de fichier
-	conflict = diff --diff-filter=U
+	du = diff --diff-filter=U #diff des fichiers en conflits
 	cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
-	uncommit = reset --soft HEAD^ #annuler le dernier commit
-	unstage = reset HEAD #retirer de l'index (dé-add)
+	cres = reset --soft HEAD^ #annuler le dernier commit
+	sres = reset HEAD #retirer de l'index/stage (dé-add)
 	find = "!git ls-files | grep -i --color"
 	grep = grep --color -n
+  caa = commit -a --amend C HEAD
 [help]
 	autocorrect = 1
 [push]
