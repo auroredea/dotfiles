@@ -1,6 +1,6 @@
 # User configuration
 
-export PATH="$PATH:/home/dev/Applications/diff-so-fancy:/home/dev/stand-alone-tagger/ext/wapiti-1.5.0"
+export PATH="$PATH:/home/dev/Applications/diff-so-fancy:/home/dev/stand-alone-tagger/ext/wapiti-1.5.0:/home/dev/.local/bin"
 
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
