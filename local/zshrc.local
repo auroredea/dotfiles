@@ -10,3 +10,7 @@ export LANG=fr_FR.UTF-8
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git sudo command-not-found wd)
+
+# Projets secrets
+# If zshrc.secret exists, load it.
+[ -f ~/.zshrc.secret ] && source ~/.zshrc.secret
