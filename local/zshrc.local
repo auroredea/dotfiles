@@ -1,6 +1,9 @@
 # User configuration
 
-export PATH="$PATH:/home/dev/Applications/diff-so-fancy:/home/dev/stand-alone-tagger/ext/wapiti-1.5.0:/home/dev/.local/bin"
+export PATH="$PATH:/home/developpement/Applications/diff-so-fancy:/home/developpement/stand-alone-tagger/ext/wapiti-1.5.0:/home/developpement/.local/bin"
+
+export NVM_DIR="/home/developpement/Applications/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
