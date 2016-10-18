@@ -18,15 +18,15 @@
   sap = stash apply
   sl = stash list
   sd = stash drop
-	ls = branch -a
-	lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers
-	l = log --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #branche courante sans modification de fichier
-	du = diff --diff-filter=U #diff des fichiers en conflits
-	cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
-	cres = reset --soft HEAD^ #annuler le dernier commit
-	sres = reset HEAD #retirer de l'index/stage (dé-add)
-	find = "!git ls-files | grep -i --color"
-	grep = grep --color -n
+  ls = branch -a
+  lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers
+  l = log --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #branche courante sans modification de fichier
+  du = diff --diff-filter=U #diff des fichiers en conflits
+  cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
+  cres = reset --soft HEAD^ #annuler le dernier commit
+  sres = reset HEAD #retirer de l'index/stage (dé-add)
+  find = "!git ls-files | grep -i --color"
+  grep = grep --color -n
   caa = commit -a --amend -C HEAD #re-commit (efface avant) avec nouveaux fichiers
   ri = rebase -i #magic system sur ma branche (changer historique)
   pl = pull
@@ -39,6 +39,7 @@
   ours = "!f() { git co --ours $@ && git add $@; }; f" #ok branche courante
   theirs = "!f() { git co --theirs $@ && git add $@; }; f" #ok branche à checkout/merge
   la = "!git config -l | grep alias | cut -c 7-" #liste les alias
+  alias = "!git config -l | grep alias | cut -c 7-" #liste les alias
 [help]
 	autocorrect = 1
 [push]
