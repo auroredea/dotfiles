@@ -1,6 +1,6 @@
 # User configuration
 
-export PATH="$PATH:/home/developpement/Applications/diff-so-fancy:/home/developpement/stand-alone-tagger/ext/wapiti-1.5.0:/home/developpement/.local/bin"
+export PATH="$PATH:/home/developpement/Applications/diff-so-fancy:/home/developpement/stand-alone-tagger/ext/wapiti-1.5.0:/home/developpement/.local/bin:/home/developpement/Applications/Telegram"
 
 export NVM_DIR="/home/developpement/Applications/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
