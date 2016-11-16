@@ -25,3 +25,12 @@ let NERDTreeShowHidden=1
 " Plugin Lexima (auto encapsulation)
 let g:lexima_enable_endwise_rules = 1
 let g:lexima_enable_newline_rules = 1
+
+au! BufRead,BufNewFile *.json set filetype=json
+
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
