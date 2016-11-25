@@ -1,12 +1,12 @@
 [user]
-	name = auroredea
-	email = aurore@deamaral.fr
+  name = auroredea
+  email = aurore@deamaral.fr
 [color]
-	branch = true
-	ui = true
-	diff = true
-	status = true
-	log = true
+  branch = true
+  ui = true
+  diff = true
+  status = true
+  log = true
 [alias]
   a = add
   s = status
@@ -18,7 +18,8 @@
   sap = stash apply
   sl = stash list
   sd = stash drop
-  ls = branch -a
+  ls = branch -vv
+  lsa = branch -a -vv
   lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers
   l = log --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #branche courante sans modification de fichier
   du = diff --diff-filter=U #diff des fichiers en conflits
@@ -40,11 +41,13 @@
   theirs = "!f() { git co --theirs $@ && git add $@; }; f" #ok branche à checkout/merge
   la = "!git config -l | grep alias | cut -c 7-" #liste les alias
   alias = "!git config -l | grep alias | cut -c 7-" #liste les alias
+  plro = pull --rebase origin
+  plru = pull --rebase upstream
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [push]
-	default = matching
+  default = matching
 [core]
-	autocrlf = input
-	pager = diff-so-fancy | less --tabs=1,5 -R
-	editor = vim -u NONE
+  autocrlf = input
+  pager = diff-so-fancy | less --tabs=1,5 -R
+  editor = vim -u NONE
