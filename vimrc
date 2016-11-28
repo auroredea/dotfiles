@@ -5,6 +5,9 @@
 " Annule la compatibilite avec l'ancetre Vi : totalement indispensable
 set nocompatible
 
+" Disabling BCE(background color erase)
+set t_ut=
+
 " Activation de pathogen
 call pathogen#infect()
 
@@ -57,7 +60,7 @@ imap ;; <Esc>
 map ;; <Esc>
 
 " Afficher les espaces
-set list lcs=trail:·,precedes:«,extends:»,eol:↲,tab:»·
+" set list lcs=trail:·,precedes:«,extends:»,eol:↲,tab:»·
 " Tabulation à deux espaces, permet :retab des tabs -> espaces
 set shiftwidth=2     " Indentation à deux espaces
 set tabstop=2        " Indentation à deux espaces

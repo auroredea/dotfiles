@@ -1,8 +1,6 @@
 " VIM Configuration - Aurore de Amaral
 
 set showmatch " Sélectionne la paranthese correspondante ouvrante ou fermante
-"set guifont=Menlo " Utilise la font Menlo
-set lines=45 columns=130 "Ouvre le GUI avec une taille déterminée
 
 " Activation recherche de nom de fichier
 let g:ctrlp_map = "<leader>s"
@@ -27,6 +25,17 @@ let g:lexima_enable_endwise_rules = 1
 let g:lexima_enable_newline_rules = 1
 
 au! BufRead,BufNewFile *.json set filetype=json
+
+" Nerdtree
+autocmd vimenter * NERDTree
+let NERDTreeShowBookmarks=1
+let NERDTreeChDirMode=0
+let NERDTreeQuitOnOpen=0
+let NERDTreeMouseMode=2
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr']
+let NERDTreeKeepTreeInNewTab=1
+let g:nerdtree_tabs_open_on_gui_startup=0
 
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
