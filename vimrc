@@ -8,9 +8,6 @@ set nocompatible
 " Disabling BCE(background color erase)
 set t_ut=
 
-" Activation de pathogen
-call pathogen#infect()
-
 " -- Affichage
 set title                 " Met a jour le titre de votre fenetre ou de
                           " votre terminal

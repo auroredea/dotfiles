@@ -2,6 +2,20 @@
 
 set showmatch " Sélectionne la paranthese correspondante ouvrante ou fermante
 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'Yggdroot/indentLine'
+Plugin 'cohama/lexima.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+
+call vundle#end()            
+
 " Activation recherche de nom de fichier
 let g:ctrlp_map = "<leader>s"
 " Ctrlp recherche en priorite dans /home
