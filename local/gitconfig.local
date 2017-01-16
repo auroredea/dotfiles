@@ -16,8 +16,8 @@
   cia = commit -a #commit les fichiers indexés
   sa = stash #add stash
   sap = stash apply
-  sl = stash list
-  sd = stash drop
+  sal = stash list
+  sad = stash drop
   ls = branch -vv
   lsa = branch -a -vv
   lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers

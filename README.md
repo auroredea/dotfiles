@@ -15,7 +15,7 @@ sh -c "$(curl -fsSL \
 
 ### What is set up?
 * [Vim](http://www.vim.org/) as your core editor
-* [Pathogen](https://github.com/tpope/vim-pathogen) as your core plugin manager for Vim, and some selected vim plugins (optional).
+* [Vundle](https://github.com/VundleVim/Vundle.vim) as your core plugin manager for Vim, and some selected vim plugins (optional).
 * [Zsh](http://www.zsh.org/) as your shell
 * [Oh-my-zsh](http://ohmyz.sh/) as your zsh framework
 
