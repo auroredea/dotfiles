@@ -6,25 +6,21 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'Yggdroot/indentLine'
 Plugin 'cohama/lexima.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()            
 
-" Activation recherche de nom de fichier
-let g:ctrlp_map = "<leader>s"
-" Ctrlp recherche en priorite dans /home
-let g:ctrlp_working_path_mode = 'cr'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_user_command = 'find %s -type f'
-
 " les archives sont du filetype zip
 au BufRead,BufNewFile *.jar,*.war,*.ear,*.sar,*.rar set filetype=zip
+
+" Syntax highlight for scala files
+au BufRead,BufNewFile *.scala set filetype=scala
 
 " Plugin NerdTREE (explorateur de fichier)
 map <leader>d :NERDTreeToggle<CR> " explorer on/off
@@ -51,9 +47,17 @@ let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bz
 let NERDTreeKeepTreeInNewTab=1
 let g:nerdtree_tabs_open_on_gui_startup=0
 
+" Vim Powerline
+let g:Powerline_symbols = 'compatible'
+set encoding=utf-8 " Necessary to show Unicode glyphs
+
+" Move selected lines
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
+
+" set fuzzy matching for path
+set path+=**
