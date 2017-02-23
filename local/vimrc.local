@@ -61,3 +61,4 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " set fuzzy matching for path
 set path+=**
+set wildmenu
