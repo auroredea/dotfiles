@@ -11,8 +11,8 @@ Plugin 'cohama/lexima.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'vim-airline/vim-airline'
 
 call vundle#end()            
 
@@ -46,10 +46,6 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.pyc','\~$','\.swo$','\.swp$','\.git','\.hg','\.svn','\.bzr']
 let NERDTreeKeepTreeInNewTab=1
 let g:nerdtree_tabs_open_on_gui_startup=0
-
-" Vim Powerline
-let g:Powerline_symbols = 'compatible'
-set encoding=utf-8 " Necessary to show Unicode glyphs
 
 " Move selected lines
 nnoremap <C-j> :m .+1<CR>==
