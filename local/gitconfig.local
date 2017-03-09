@@ -12,6 +12,8 @@
   s = status
   st = status
   co = checkout
+  rv = checkout --
+  revert = checkout --
   ci = commit
   cia = commit -a #commit les fichiers indexés
   sa = stash #add stash
