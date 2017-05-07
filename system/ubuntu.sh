@@ -37,10 +37,6 @@ echo "\n*** Don't forget to add $HOME/$BIN/diff-highlight to the PATH"
 git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
 cd $HOME/.dotfiles || exit
 
-# Install Pathogen
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
 # symlink it up!
 ./system/symlink_setup.sh
 
