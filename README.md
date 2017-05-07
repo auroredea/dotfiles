@@ -7,10 +7,18 @@ Inspiration and settings for Vim proudly inspired from [Vim for humans](https://
 ## Installation
 
 Just run the following command in your terminal.
+For Debian and Co
 
 ```shell
 sh -c "$(curl -fsSL \
   https://raw.githubusercontent.com/auroredea/dotfiles/master/system/ubuntu.sh)"
+```
+
+For Arch Linux and Co
+
+```shell
+sh -c "$(curl -fsSL \
+  https://raw.githubusercontent.com/auroredea/dotfiles/master/system/archlinux.sh)"
 ```
 
 ### What is set up?
