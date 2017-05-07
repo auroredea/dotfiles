@@ -1,8 +1,8 @@
 # User configuration
 
-export PATH="$PATH:/home/developpement/Applications/diff-so-fancy:/home/developpement/stand-alone-tagger/ext/wapiti-1.5.0:/home/developpement/.local/bin:/home/developpement/Applications/Telegram"
+export PATH="$PATH:~/Applications/diff-so-fancy:~/stand-alone-tagger/ext/wapiti-1.5.0:~/.local/bin:~/Applications/Telegram"
 
-export NVM_DIR="/home/developpement/Applications/nvm"
+export NVM_DIR="~/Applications/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # You may need to manually set your language environment
