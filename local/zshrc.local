@@ -1,5 +1,4 @@
 # User configuration
-
 export PATH="$PATH:~/Applications/diff-so-fancy:~/Applications/Telegram"
 
 export NVM_DIR="~/Applications/nvm"
@@ -12,7 +11,7 @@ export LANG=fr_FR.UTF-8
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo command-not-found wd)
+plugins=(git)
 
 # Projets secrets
 # If zshrc.secret exists, load it.
