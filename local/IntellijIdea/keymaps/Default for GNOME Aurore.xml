@@ -1,4 +1,7 @@
 <keymap version="1" name="Default for GNOME Aurore" parent="Default for GNOME">
+  <action id="ActivateProjectToolWindow">
+    <keyboard-shortcut first-keystroke="alt f11" />
+  </action>
   <action id="CommentByBlockComment">
     <keyboard-shortcut first-keystroke="shift ctrl slash" />
     <keyboard-shortcut first-keystroke="shift ctrl divide" />
@@ -27,6 +30,7 @@
   <action id="MoveStatementUp" />
   <action id="ResizeToolWindowDown" />
   <action id="ResizeToolWindowUp" />
+  <action id="RunJsbtTask" />
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt enter" />
   </action>
