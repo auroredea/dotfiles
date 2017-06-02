@@ -4,3 +4,6 @@ alias rm='rm -r'
 #svim is for large files, better than vi
 alias svim='vim -u NONE'
 #alias jekylldocs='jekyll _3.3.0_ docs'
+
+#Glances
+alias glances='glances --disable-folders --disable-sensors'
