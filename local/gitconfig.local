@@ -8,7 +8,7 @@
   status = true
   log = true
 [alias]
-  a = add
+  a = add -p #p for verification before adding
   s = status
   st = status
   co = checkout
