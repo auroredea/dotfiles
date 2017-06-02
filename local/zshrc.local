@@ -1,5 +1,5 @@
 # User configuration
-export PATH="$PATH:~/Applications/diff-so-fancy:~/Applications/Telegram"
+export PATH="$PATH:~/Applications/diff-so-fancy:~/Applications/Telegram:~/Applications/Postman-linux-x64-4.10.7/Postman/"
 
 export NVM_DIR="~/Applications/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
