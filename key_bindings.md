@@ -81,7 +81,7 @@ Key | Description
 <kbd>N</kbd> | Aller à l'occurrence précédente
 `:s/old/new/g` | Remplace toutes les occurrences sur la ligne
 `:s/old/new/gc` | Remplace toutes les occurrences sur la ligne avec confirmation
-`:s%/old/new/g` | Remplace toutes les occurrences
+`:%s/old/new/g` | Remplace toutes les occurrences
 `:g/old/d` | Supprime toutes les lignes contenant le pattern
 `:g!/old/d` | Supprime toutes les lignes ne contenant pas le pattern
 <kbd>r</kbd> | Remplace sous le curseur
