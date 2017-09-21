@@ -20,10 +20,9 @@
   sap = stash apply
   sal = stash list
   sad = stash drop
-  ls = branch -vv
   lsa = branch -a -vv
   lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers
-  l = log --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #branche courante sans modification de fichier
+  l = log --format='%h%Cgreen%d%Creset %Cblue%an%Creset %C(white)%ar%Creset %s' --graph --all --date='short'
   du = diff --diff-filter=U #diff des fichiers en conflits
   dc = "!f() { git diff $@^!; }; f"
   cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
