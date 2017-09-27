@@ -45,6 +45,8 @@
   alias = "!git config -l | grep alias | cut -c 7-" #liste les alias
   plro = pull --rebase origin
   plru = pull --rebase upstream
+  mours = merge -s recursive -Xours
+  mtheirs = merge -s recursive -Xtheirs
 [help]
   autocorrect = 1
 [push]
