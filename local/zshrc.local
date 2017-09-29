@@ -13,6 +13,11 @@ export LANG=fr_FR.UTF-8
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+alias ps='ps -ef'
+function diff {
+  dwdiff -3 <(echo $1) <(echo $2)
+}
+
 # Projets secrets
 # If zshrc.secret exists, load it.
 [ -f ~/.zshrc.secret ] && source ~/.zshrc.secret
