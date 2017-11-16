@@ -2,6 +2,9 @@
   <action id="ActivateProjectToolWindow">
     <keyboard-shortcut first-keystroke="alt f11" />
   </action>
+  <action id="ActivateVersionControlToolWindow">
+    <keyboard-shortcut first-keystroke="alt f9" />
+  </action>
   <action id="Back">
     <mouse-shortcut keystroke="button4" />
     <keyboard-shortcut first-keystroke="altGraph left" />
@@ -15,6 +18,11 @@
     <keyboard-shortcut first-keystroke="ctrl slash" />
     <keyboard-shortcut first-keystroke="ctrl divide" />
     <keyboard-shortcut first-keystroke="ctrl colon" />
+  </action>
+  <action id="Console.Execute" />
+  <action id="Console.TableResult.EditValue">
+    <keyboard-shortcut first-keystroke="f2" />
+    <keyboard-shortcut first-keystroke="alt enter" />
   </action>
   <action id="Diff.NextChange" />
   <action id="Diff.PrevChange" />
@@ -48,6 +56,7 @@
     <mouse-shortcut keystroke="button5" />
     <keyboard-shortcut first-keystroke="altGraph right" />
   </action>
+  <action id="Images.Thumbnails.EnterAction" />
   <action id="IncreaseColumnWidth" />
   <action id="IncrementWindowWidth" />
   <action id="MoveLineDown">
@@ -62,11 +71,15 @@
   <action id="NextTab" />
   <action id="PreviousEditorTab" />
   <action id="PreviousTab" />
+  <action id="PropertyInspectorActions.EditValue" />
   <action id="ResizeToolWindowDown" />
   <action id="ResizeToolWindowLeft" />
   <action id="ResizeToolWindowRight" />
   <action id="ResizeToolWindowUp" />
   <action id="RunJsbtTask" />
+  <action id="Scala.CreateLightWorksheetAction">
+    <keyboard-shortcut first-keystroke="shift ctrl s" />
+  </action>
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt enter" />
   </action>
