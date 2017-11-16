@@ -30,8 +30,7 @@
   sres = reset HEAD #retirer de l'index/stage (dé-add)
   find = "!git ls-files | grep -i --color"
   grep = grep --color -n
-  caa = commit -a --amend -C HEAD #re-commit (efface avant) avec nouveaux fichiers
-  ri = rebase -i #magic system sur ma branche (changer historique)
+  ri = rebase -i #magic system, mettre le nombre de commit à rebase avec HEAD~CHIFFRE
   pl = pull
   ps = push
   plo = pull origin
