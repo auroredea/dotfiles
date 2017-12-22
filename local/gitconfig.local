@@ -16,6 +16,7 @@
   revert = checkout --
   ci = commit
   cia = commit -a #commit les fichiers indexés
+  oops = commit --amend
   sa = stash #add stash
   sap = stash apply
   sal = stash list
