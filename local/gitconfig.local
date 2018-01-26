@@ -1,6 +1,6 @@
 [user]
-  name = auroredea
-  email = aurore@deamaral.fr
+  name = Aurore
+  email = adeamaral@xebia.fr
 [color]
   branch = true
   ui = true
@@ -38,6 +38,10 @@
   pso = push origin
   plu = pull upstream
   psu = push upstream
+  #only on BNP
+  plb = -c http.sslVerify=false pull --rebase origin
+  psb = -c http.sslVerify=false push origin
+  fb = -c http.sslVerify=false fetch
   #résoudre les conflits (accepte une version ou une autre pour tous les fichiers listés)
   ours = "!f() { git co --ours $@ && git add $@; }; f" #ok branche courante
   theirs = "!f() { git co --theirs $@ && git add $@; }; f" #ok branche à checkout/merge
@@ -54,4 +58,9 @@
 [core]
   autocrlf = input
   pager = diff-so-fancy | less --tabs=1,5 -R
-  editor = gvim
+  editor = vim
+[oh-my-zsh]
+  hide-dirty = 1
+[credential]
+  username = c10595
+  helper = store --file ~/.git-credentials
