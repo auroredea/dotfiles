@@ -10,24 +10,28 @@ export BIN=Applications
 while true; do -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Get information on the newest versions of packages and their dependencies.
-apt update
+echo "Mise à jour des paquets\n"
+sudo apt update
 
 # Install useful binaries
-apt -y install git
-apt -y install tree
+echo "Installation GIT et VIM\n"
+sudo apt -y install git
+sudo apt -y install tree
 
 # Install more recent version of Vim
-apt -y remove vim-tiny
-apt -y install vim
+sudo apt -y remove vim-tiny
+sudo apt -y install vim
 
 # Install zsh and oh-my-zsh
-apt -y install zsh
+echo "Installation ZSH et OH-MY-ZSH\n"
+sudo apt -y install zsh chsh
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL \
   https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Adding diff-so-fancy for git log
 # See https://github.com/git/git/tree/master/contrib/diff-highlight
+echo "Installation diff-highlight\n"
 sudo ln -sf /usr/share/doc/git/contrib/diff-highlight/diff-highlight /bin/
 sudo chmod +x /bin/diff-highlight
 git clone https://github.com/so-fancy/diff-so-fancy $HOME/$BIN/diff-so-fancy
