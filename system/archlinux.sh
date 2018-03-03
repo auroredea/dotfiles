@@ -7,12 +7,14 @@
 export BIN=Applications
 
 # Get information on the newest versions of packages and their dependencies.
+echo "Mise à jour des paquets\n"
 su root -c 'pacman -Syu'
 
 # Create BIN directory if no exists
 mkdir ~/$BIN
 
 # Install useful binaries
+echo "Installation GIT et VIM\n"
 su root -c 'pacman -S git --noconfirm'
 su root -c 'pacman -S tree --noconfirm'
 
@@ -20,6 +22,7 @@ su root -c 'pacman -S tree --noconfirm'
 su root -c 'pacman -S vim --noconfirm'
 
 # Install zsh and oh-my-zsh
+echo "Installation ZSH et OH-MY-ZSH\n"
 su root -c 'pacman -S zsh --noconfirm'
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL \
@@ -27,6 +30,7 @@ sh -c "$(curl -fsSL \
 
 # Adding diff-so-fancy for git log
 # See https://github.com/git/git/tree/master/contrib/diff-highlight
+echo "Installation diff-highlight\n"
 su root -c 'ln -sf /usr/share/doc/git/contrib/diff-highlight/diff-highlight /bin/'
 su root -c 'chmod +x /bin/diff-highlight'
 git clone https://github.com/so-fancy/diff-so-fancy $HOME/$BIN/diff-so-fancy
