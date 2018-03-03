@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ################################
-# TESTED WITH UBUNTU 16.04 LTS #
+# TESTED WITH ARCHLINUX        #
 ################################
 
 echo "\n*** Creating symlinks..."
@@ -30,6 +30,10 @@ function localfiles {
 
 # adding vim files
 function vimplugins {
+  # utile for some of my plugins... only wor on archlinux
+  echo "Install pip2 for my plugins on Archlinux\n"
+  su root -c 'pacman -S python2-pip && pip2 install sexpdata websocket-client'
+  echo "Install Plugins with Vundle\n"
   mkdir -p $HOME/.vim/bundle 
   git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
   vim +PluginInstall +qall
