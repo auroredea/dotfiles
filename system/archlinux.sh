@@ -6,24 +6,21 @@
 
 export BIN=Applications
 
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 # Get information on the newest versions of packages and their dependencies.
-pacman -Syu
+su root -c 'pacman -Syu'
 
 # Create BIN directory if no exists
 mkdir ~/$BIN
 
 # Install useful binaries
-pacman -S git --noconfirm
-pacman -S tree --noconfirm
+su root -c 'pacman -S git --noconfirm'
+su root -c 'pacman -S tree --noconfirm'
 
 # Install more recent version of Vim
-pacman -S vim --noconfirm
+su root -c 'pacman -S vim --noconfirm'
 
 # Install zsh and oh-my-zsh
-pacman -S zsh --noconfirm
+su root -c 'pacman -S zsh --noconfirm'
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL \
   https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
