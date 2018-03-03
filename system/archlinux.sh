@@ -27,8 +27,8 @@ sh -c "$(curl -fsSL \
 
 # Adding diff-so-fancy for git log
 # See https://github.com/git/git/tree/master/contrib/diff-highlight
-sudo ln -sf /usr/share/doc/git/contrib/diff-highlight/diff-highlight /bin/
-sudo chmod +x /bin/diff-highlight
+su root -c 'ln -sf /usr/share/doc/git/contrib/diff-highlight/diff-highlight /bin/'
+su root -c 'chmod +x /bin/diff-highlight'
 git clone https://github.com/so-fancy/diff-so-fancy $HOME/$BIN/diff-so-fancy
 echo "\n*** Don't forget to add $HOME/$BIN/diff-highlight to the PATH"
 
