@@ -18,7 +18,7 @@
   cia = commit -a #commit les fichiers indexés
   oops = commit --amend
   sa = stash #add stash
-  sap = stash apply
+  sap = stash pop
   sal = stash list
   sad = stash drop
   lsa = branch -a -vv
