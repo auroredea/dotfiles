@@ -51,6 +51,7 @@
   plru = pull --rebase upstream
   mours = merge -s recursive -Xours
   mtheirs = merge -s recursive -Xtheirs
+  delocal = "!f() { git branch --merged master --no-color | grep -v master | xargs git branch -d }; f"
 [help]
   autocorrect = 1
 [push]
