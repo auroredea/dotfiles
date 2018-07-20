@@ -12,23 +12,19 @@
   s = status
   st = status
   co = checkout
-  rv = checkout --
-  revert = checkout --
   ci = commit
   cia = commit -a #commit les fichiers indexés
   oops = commit --amend
-  sa = stash #add stash
+  sa = stash
   sap = stash pop
   sal = stash list
   sad = stash drop
-  lsa = branch -a -vv
+  ls = branch -a -vv
   lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers
   l = log --format='%h%Cgreen%d%Creset %Cblue%an%Creset %C(white)%ar%Creset %s' --graph --all --date='short'
   du = diff --diff-filter=U #diff des fichiers en conflits
-  dc = "!f() { git diff $@^!; }; f"
   cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
-  cres = reset --soft HEAD^ #annuler le dernier commit
-  sres = reset HEAD #retirer de l'index/stage (dé-add)
+  res = reset HEAD^ #annuler le dernier commit
   find = "!git ls-files | grep -i --color"
   grep = grep --color -n
   ri = rebase -i #magic system, mettre le nombre de commit à rebase avec HEAD~CHIFFRE
@@ -45,7 +41,6 @@
   #résoudre les conflits (accepte une version ou une autre pour tous les fichiers listés)
   ours = "!f() { git co --ours $@ && git add $@; }; f" #ok branche courante
   theirs = "!f() { git co --theirs $@ && git add $@; }; f" #ok branche à checkout/merge
-  la = "!git config -l | grep alias | cut -c 7-" #liste les alias
   alias = "!git config -l | grep alias | cut -c 7-" #liste les alias
   plro = pull --rebase origin
   plru = pull --rebase upstream
