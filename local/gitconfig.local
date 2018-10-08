@@ -19,7 +19,8 @@
   sap = stash pop
   sal = stash list
   sad = stash drop
-  ls = branch -a -vv
+  branch = branch -a -vv
+  ls = remote -v show
   lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers
   l = log --format='%h%Cgreen%d%Creset %Cblue%an%Creset %C(white)%ar%Creset %s' --graph --all --date='short'
   du = diff --diff-filter=U #diff des fichiers en conflits
