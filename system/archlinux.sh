@@ -22,6 +22,7 @@ su root -c 'pacman -S tree --noconfirm'
 su root -c 'pacman -S jq --noconfirm'
 su root -c 'pacman -S tmux --noconfirm'
 su root -c 'pacman -S glances --noconfirm'
+su root -c 'pacman -S the_silver_searcher --noconfirm'
 
 # Install zsh and oh-my-zsh
 echo "Installation ZSH avec OH-MY-ZSH\n"
@@ -57,6 +58,6 @@ cd yaourt
 makepkg -si --noconfirm
 cd $HOME
 
-echo "\n** Ne pas oublier d'installer ses IDE favoris (et tilix, ag) !"
+echo "\n** Ne pas oublier d'installer ses IDE favoris (et tilix) !"
 
 echo "\n*** [OK]"
