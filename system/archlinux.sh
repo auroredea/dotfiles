@@ -1,28 +1,29 @@
 #!/bin/bash
 
 ################################
-#   TESTED WITH ARCH LINUX     #
+#TESTED WITH ARCH LINUX/MANJARO#
 ################################
 
-export BIN=Applications
+export BIN=applications
+timeout 2 sudo id && echo "sudo permitted" || exit
 
 # Get information on the newest versions of packages and their dependencies.
-echo "Mise à jour des paquets\n"
+echo "Mise à jour des paquets et installation base-devel\n"
 su root -c 'pacman -Syu'
+su root -c 'pacman -S base-devel --noconfirm'
 
 # Create BIN directory if no exists
-mkdir ~/$BIN
+mkdir $HOME/$BIN
 
 # Install useful binaries
-echo "Installation GIT et VIM\n"
+echo "Installation GIT, VIM, JQ\n"
 su root -c 'pacman -S git --noconfirm'
 su root -c 'pacman -S tree --noconfirm'
-
-# Install more recent version of Vim
 su root -c 'pacman -S vim --noconfirm'
+su root -c 'pacman -S jq --noconfirm'
 
 # Install zsh and oh-my-zsh
-echo "Installation ZSH et OH-MY-ZSH\n"
+echo "Installation ZSH avec OH-MY-ZSH\n"
 su root -c 'pacman -S zsh --noconfirm'
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL \
@@ -42,5 +43,17 @@ cd $HOME/.dotfiles || exit
 
 # symlink it up!
 ./system/symlink_setup.sh
+
+# Installing Yaourt
+echo "Installing Yaourt for AUR facilities."
+cd $HOME/$BIN
+git clone https://aur.archlinux.org/package-query.git
+cd package-query
+makepkg -si
+cd $HOME/$BIN
+git clone https://aur.archlinux.org/yaourt.git
+cd yaourt
+makepkg -si
+cd $HOME
 
 echo "\n*** Finished setting up your system! Logout and login again."
