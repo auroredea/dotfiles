@@ -50,11 +50,11 @@ echo "Installation de Yaourt pour AUR."
 cd $HOME/$BIN
 git clone https://aur.archlinux.org/package-query.git
 cd package-query
-makepkg -si
+makepkg -si --noconfirm
 cd $HOME/$BIN
 git clone https://aur.archlinux.org/yaourt.git
 cd yaourt
-makepkg -si
+makepkg -si --noconfirm
 cd $HOME
 
 echo "\n** Ne pas oublier d'installer ses IDE favoris (et tilix) !"
