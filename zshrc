@@ -15,6 +15,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias ll='ls -alhF'
 alias l='ls -CF'
+alias glances='glances --disable-folders --disable-sensors'
 
 # Define custom aliases
 [ -f ~/.aliases.local ] && source ~/.aliases.local
