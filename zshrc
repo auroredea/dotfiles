@@ -15,6 +15,7 @@ alias ll='ls -alhF'
 alias l='ls -CF'
 alias glances='glances --disable-folders --disable-sensors'
 alias ip='ip -c'
+alias ps='ps -ef'
 
 # Define custom aliases
 [ -f ~/.aliases.local ] && source ~/.aliases.local

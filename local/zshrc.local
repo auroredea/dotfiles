@@ -1,9 +1,6 @@
 # User configuration
 export PATH="$PATH:~/Applications/diff-so-fancy:~/Applications/Telegram:~/Applications/Postman-linux-x64-5.1.2/Postman/:~/.idea-IU/bin/"
 
-export NVM_DIR="~/Applications/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-export CHROME_BIN="/usr/bin/chromium"
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
 
@@ -11,9 +8,8 @@ export LANG=fr_FR.UTF-8
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages)
+plugins=(git)
 
-alias ps='ps -ef'
 function diff {
   dwdiff -3 <(echo $1) <(echo $2)
 }
