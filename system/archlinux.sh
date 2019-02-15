@@ -5,7 +5,7 @@
 ################################
 
 export BIN=applications
-timeout 2 sudo id && echo "sudo permitted" || exit
+timeout 2 sudo id && echo "[OK] sudo" || exit
 
 # Get information on the newest versions of packages and their dependencies.
 echo "Mise à jour des paquets et installation base-devel\n"
@@ -31,11 +31,11 @@ sh -c "$(curl -fsSL \
 
 # Adding diff-so-fancy for git log
 # See https://github.com/git/git/tree/master/contrib/diff-highlight
-echo "Installation diff-highlight\n"
+echo "Installation du diff-highlight\n"
 su root -c 'ln -sf /usr/share/doc/git/contrib/diff-highlight/diff-highlight /bin/'
 su root -c 'chmod +x /bin/diff-highlight'
 git clone https://github.com/so-fancy/diff-so-fancy $HOME/$BIN/diff-so-fancy
-echo "\n*** Don't forget to add $HOME/$BIN/diff-highlight to the PATH"
+echo "\n*** Ne pas oublier d'ajouter $HOME/$BIN/diff-highlight au PATH"
 
 # Clone this repo and change to its directory
 git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
@@ -45,7 +45,7 @@ cd $HOME/.dotfiles || exit
 ./system/symlink_setup.sh
 
 # Installing Yaourt
-echo "Installing Yaourt for AUR facilities."
+echo "Installation de Yaourt pour AUR."
 cd $HOME/$BIN
 git clone https://aur.archlinux.org/package-query.git
 cd package-query
@@ -56,4 +56,6 @@ cd yaourt
 makepkg -si
 cd $HOME
 
-echo "\n*** Finished setting up your system! Logout and login again."
+echo "\n** Ne pas oublier d'installer ses IDE favoris !"
+
+echo "\n*** [OK]"
