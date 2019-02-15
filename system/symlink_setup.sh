@@ -24,7 +24,6 @@ ln -sf $DOTFILES/tmux.conf $HOME/.tmux.conf
 # adding local files ?
 function localfiles {
  cd $HOME
- ln -s $DOTFILES/local/aliases.local $HOME/.aliases.local
  ln -s $DOTFILES/local/gitconfig.local $HOME/.gitconfig.local
  ln -s $DOTFILES/local/vimrc.local $HOME/.vimrc.local
  ln -s $DOTFILES/local/zshrc.local $HOME/.zshrc.local
