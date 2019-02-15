@@ -5,7 +5,6 @@
 ################################
 
 export BIN=applications
-timeout 2 sudo id && echo "[OK] sudo" || exit
 
 # Get information on the newest versions of packages and their dependencies.
 echo "Mise à jour des paquets et installation base-devel\n"
