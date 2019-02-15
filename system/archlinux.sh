@@ -15,12 +15,13 @@ su root -c 'pacman -S base-devel --noconfirm'
 mkdir $HOME/$BIN
 
 # Install useful binaries
-echo "Installation GIT, VIM, JQ\n"
+echo "Installation GIT, VIM, JQ, TMUX and GLANCES\n"
 su root -c 'pacman -S git --noconfirm'
-su root -c 'pacman -S tree --noconfirm'
 su root -c 'pacman -S vim --noconfirm'
+su root -c 'pacman -S tree --noconfirm'
 su root -c 'pacman -S jq --noconfirm'
 su root -c 'pacman -S tmux --noconfirm'
+su root -c 'pacman -S glances --noconfirm'
 
 # Install zsh and oh-my-zsh
 echo "Installation ZSH avec OH-MY-ZSH\n"
