@@ -4,7 +4,7 @@
 # TESTED WITH ARCHLINUX        #
 ################################
 
-echo "\n*** Creating symlinks..."
+echo "\n Création des symlinks..."
 
 export DOTFILES=$HOME/.dotfiles
 
@@ -18,6 +18,9 @@ ln -sf $DOTFILES/gitignore_global $HOME/.gitignore_global
 # zsh
 ln -sf $DOTFILES/zshrc $HOME/.zshrc
 
+# tmux
+ln -sf $DOTFILES/tmux.conf $HOME/.tmux.conf
+
 # adding local files ?
 function localfiles {
  cd $HOME
@@ -25,34 +28,34 @@ function localfiles {
  ln -s $DOTFILES/local/gitconfig.local $HOME/.gitconfig.local
  ln -s $DOTFILES/local/vimrc.local $HOME/.vimrc.local
  ln -s $DOTFILES/local/zshrc.local $HOME/.zshrc.local
- echo "local files installed !"
+ echo "fichiers locaux installés !"
 }
 
 # adding vim files
 function vimplugins {
   # utile for some of my plugins... only wor on archlinux
-  echo "Install pip2 for my plugins on Archlinux\n"
+  echo "Installation pip2 pour les plugins de Vim\n"
   su root -c 'pacman -S python2-pip && pip2 install sexpdata websocket-client'
-  echo "Install Plugins with Vundle\n"
+  echo "Installation des plugins avec Vundle\n"
   mkdir -p $HOME/.vim/bundle 
   git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
   vim +PluginInstall +qall
 }
 
 while true; do
-    read -p "Do you wish to add the local files ? [y/n] " yn
+    read -p "Installer fichiers locaux ? [y/n] " yn
     case $yn in
         [Yy]* ) localfiles; break;;
         [Nn]* ) exit;;
-        * ) echo "Please answer [y]es or [n]o ";;
+        * ) echo "Soit [y]es or [n]o ";;
     esac
 done
 
 while true; do
-    read -p "Do you wish to add selected vim plugins  ? [y/n] " yn
+    read -p "Installer plugins vim ? [y/n] " yn
     case $yn in
         [Yy]* ) vimplugins; break;;
         [Nn]* ) exit;;
-        * ) echo "Please answer [y]es or [n]o ";;
+        * ) echo "Soit [y]es or [n]o ";;
     esac
 done
