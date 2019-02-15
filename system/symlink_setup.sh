@@ -35,7 +35,7 @@ function localfiles {
 function vimplugins {
   # utile for some of my plugins... only wor on archlinux
   echo "Installation pip2 pour les plugins de Vim\n"
-  su root -c 'pacman -S python2-pip && pip2 install sexpdata websocket-client'
+  su root -c 'pacman -S python-pip && pip install sexpdata websocket-client'
   echo "Installation des plugins avec Vundle\n"
   mkdir -p $HOME/.vim/bundle 
   git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
