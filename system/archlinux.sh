@@ -57,6 +57,6 @@ cd yaourt
 makepkg -si --noconfirm
 cd $HOME
 
-echo "\n** Ne pas oublier d'installer ses IDE favoris (et tilix) !"
+echo "\n** Ne pas oublier d'installer ses IDE favoris (et tilix, ag) !"
 
 echo "\n*** [OK]"
