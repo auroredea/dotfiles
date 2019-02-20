@@ -33,9 +33,9 @@ cd $HOME/.dotfiles || exit
 
 # Installation diff-so-fancy
 cd $HOME/$BIN
-git clone https://github.com/so-fancy/diff-so-fancy.git
+git clone https://aur.archlinux.org/diff-so-fancy-git.git diff-so-fancy
 cd diff-so-fancy
-makepkg -si --noconfirm --needed
+makepkg -si
 echo "\n*** Ne pas oublier d'ajouter $HOME/$BIN/diff-so-fancy au PATH"
 
 # Install zsh and oh-my-zsh
