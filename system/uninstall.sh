@@ -12,4 +12,4 @@ rm -rf $HOME/.dotfiles
 
 cd $HOME
 rm .vimrc* .zshrc* .tmux.conf .gitconfig*
-rm -rf applications
+rm -rf $HOME/$BIN
