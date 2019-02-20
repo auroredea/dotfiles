@@ -31,14 +31,6 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL \
   https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Adding diff-so-fancy for git log
-# See https://github.com/git/git/tree/master/contrib/diff-highlight
-echo "Installation du diff-highlight\n"
-su root -c 'ln -sf /usr/share/doc/git/contrib/diff-highlight/diff-highlight /bin/'
-su root -c 'chmod +x /bin/diff-highlight'
-git clone https://github.com/so-fancy/diff-so-fancy $HOME/$BIN/diff-so-fancy
-echo "\n*** Ne pas oublier d'ajouter $HOME/$BIN/diff-highlight au PATH"
-
 # Clone this repo and change to its directory
 git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
 cd $HOME/.dotfiles || exit
@@ -56,7 +48,13 @@ cd $HOME/$BIN
 git clone https://aur.archlinux.org/yaourt.git
 cd yaourt
 makepkg -si --noconfirm
-cd $HOME
+
+# Installation diff-so-fancy
+cd $HOME/$BIN
+git clone https://github.com/so-fancy/diff-so-fancy.git
+cd diff-so-fancy
+makepkg -si --noconfirm
+echo "\n*** Ne pas oublier d'ajouter $HOME/$BIN/diff-so-fancy au PATH"
 
 echo "\n** Ne pas oublier d'installer ses IDE favoris (et tilix) !"
 
