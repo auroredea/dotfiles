@@ -31,17 +31,6 @@ cd $HOME/.dotfiles || exit
 # symlink it up!
 ./system/symlink_setup.sh
 
-# Installing Yaourt
-echo "Installation de Yaourt pour AUR."
-cd $HOME/$BIN
-git clone https://aur.archlinux.org/package-query.git
-cd package-query
-makepkg -si --noconfirm --needed
-cd $HOME/$BIN
-git clone https://aur.archlinux.org/yaourt.git
-cd yaourt
-makepkg -si --noconfirm --needed
-
 # Installation diff-so-fancy
 cd $HOME/$BIN
 git clone https://github.com/so-fancy/diff-so-fancy.git
