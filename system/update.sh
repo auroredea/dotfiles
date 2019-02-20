@@ -4,6 +4,8 @@
 # TESTED WITH ARCHLINUX        #
 ################################
 
+export BIN=applications
+
 echo "Mise à jour système"
 su root -c 'pacman -Syu'
 
@@ -12,7 +14,7 @@ cd $HOME/.dotfiles
 git pull
 
 echo "Mise à jour diff-so-fancy"
-cd $HOME/applications/diff-so-fancy
+cd $HOME/$BIN/diff-so-fancy
 git pull
 
 # Vundle
