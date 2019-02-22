@@ -13,10 +13,6 @@ echo "Mise à jour Dotfiles"
 cd $HOME/.dotfiles
 git pull
 
-echo "Mise à jour diff-so-fancy"
-cd $HOME/$BIN/diff-so-fancy
-git pull
-
 # Vundle
 echo "Mise à jour plugins vim"
 vim +PluginUpdate +qall
