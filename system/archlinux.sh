@@ -36,7 +36,6 @@ cd $HOME/$BIN
 git clone https://aur.archlinux.org/diff-so-fancy-git.git diff-so-fancy
 cd diff-so-fancy
 makepkg -si
-echo "\n*** Ne pas oublier d'ajouter $HOME/$BIN/diff-so-fancy au PATH"
 
 # Install zsh and oh-my-zsh
 echo "Installation ZSH avec OH-MY-ZSH\n"
