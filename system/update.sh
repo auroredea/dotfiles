@@ -7,6 +7,7 @@
 export BIN=applications
 
 echo "Mise à jour système"
+echo "Please use root password"
 su root -c 'pacman -Syu'
 
 echo "Mise à jour Dotfiles"
