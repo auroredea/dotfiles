@@ -1,5 +1,5 @@
 # User configuration
-export PATH="$PATH:~/Applications/diff-so-fancy:~/Applications/Telegram:~/Applications/Postman-linux-x64-5.1.2/Postman/:~/.idea-IU/bin/"
+export PATH=~/.gem/ruby/2.6.0/bin:~/Applications/diff-so-fancy:$PATH
 
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
