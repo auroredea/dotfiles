@@ -54,3 +54,12 @@
   editor = vim
 [oh-my-zsh]
   hide-dirty = 1
+[credential "https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/aiv"]
+    helper = !aws --profile sncfirst-dev-aiv codecommit credential-helper $@
+    useHttpPath = true
+[credential "https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/aiv-infra"]
+    helper = !aws --profile sncfirst-dev-aiv codecommit credential-helper $@
+        useHttpPath = true
+[credential "https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/locality"]
+    helper = !aws --profile sncfirst-dev-aiv codecommit credential-helper $@
+    useHttpPath = true 
