@@ -30,6 +30,7 @@
   grep = grep --color -n
   ri = rebase -i #magic system, mettre le nombre de commit à rebase avec HEAD~CHIFFRE
   pl = pull
+  plr = pull -r #pull with rebase, not merge
   ps = push
   plo = pull origin
   pso = push origin
