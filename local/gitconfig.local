@@ -19,12 +19,13 @@
   sap = stash pop
   sal = stash list
   sad = stash drop
-  branch = branch -a -vv
+  br = branch -a -vv
   ls = remote -v show
   lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers
   l = log --format='%h%Cgreen%d%Creset %Cblue%an%Creset %C(white)%ar%Creset %s' --graph --all --date='short'
   du = diff --diff-filter=U #diff des fichiers en conflits
   cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
+  resh = reset --hard HEAD
   res = reset HEAD^ #annuler le dernier commit
   find = "!git ls-files | grep -i --color"
   grep = grep --color -n
@@ -32,6 +33,7 @@
   pl = pull
   plr = pull -r #pull with rebase, not merge
   ps = push
+  psf = push --force
   plo = pull origin
   pso = push origin
   plu = pull upstream
@@ -52,6 +54,7 @@
 [core]
   autocrlf = input
   pager = diff-so-fancy | less --tabs=1,5 -R
+  filemode = false
   editor = vim
 [oh-my-zsh]
   hide-dirty = 1
