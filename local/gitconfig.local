@@ -47,6 +47,7 @@
   mours = merge -s recursive -Xours
   mtheirs = merge -s recursive -Xtheirs
   delocal = "!git remote prune origin && git branch --merged master --no-color | grep -v master | xargs git branch -d"
+  sync = "!git fetch upstream && git checkout master && git merge upstream/master"
 [help]
   autocorrect = 1
 [push]
