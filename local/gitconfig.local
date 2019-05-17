@@ -1,6 +1,6 @@
 [user]
   name = Aurore
-  email = adeamaral@xebia.fr
+  email = adeamaral@xebia.fr 
 [color]
   branch = true
   ui = true
@@ -8,46 +8,32 @@
   status = true
   log = true
 [alias]
-  a = add -p #p for verification before adding
+  a = add -p
   s = status
-  st = status
   co = checkout
-  ci = commit
-  cia = commit -a #commit les fichiers indexés
-  oops = commit --amend
-  sa = stash
-  sap = stash pop
-  sal = stash list
-  sad = stash drop
-  br = branch -a -vv
-  ls = remote -v show
-  lg = log --all --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset' #toutes les branches + modifications de fichiers
-  l = log --format='%h%Cgreen%d%Creset %Cblue%an%Creset %C(white)%ar%Creset %s' --graph --all --date='short'
-  du = diff --diff-filter=U #diff des fichiers en conflits
-  cp = cherry-pick -x #cherry-pick avec commentaire de commit auto
-  resh = reset --hard HEAD
-  res = reset HEAD^ #annuler le dernier commit
-  find = "!git ls-files | grep -i --color"
-  grep = grep --color -n
-  ri = rebase -i #magic system, mettre le nombre de commit à rebase avec HEAD~CHIFFRE
+  c = commit
+  ri = rebase -i --autosquash
   pl = pull
-  plr = pull -r #pull with rebase, not merge
   ps = push
-  psf = push --force
-  plo = pull origin
-  pso = push origin
-  plu = pull upstream
-  psu = push upstream
-  #résoudre les conflits (accepte une version ou une autre pour tous les fichiers listés)
-  ours = "!f() { git co --ours $@ && git add $@; }; f" #ok branche courante
-  theirs = "!f() { git co --theirs $@ && git add $@; }; f" #ok branche à checkout/merge
-  alias = "!git config -l | grep alias | cut -c 7-" #liste les alias
-  plro = pull --rebase origin
-  plru = pull --rebase upstream
-  mours = merge -s recursive -Xours
-  mtheirs = merge -s recursive -Xtheirs
-  delocal = "!git remote prune origin && git branch --merged master --no-color | grep -v master | xargs git branch -d"
-  sync = "!git fetch upstream && git checkout master && git merge upstream/master"
+  st = stash
+  m = merge
+  f = fetch
+  up = pl --rebase --autostash
+  pick = cherry-pick -x
+  erase = reset --hard HEAD
+  cancel = reset --mixed HEAD
+  save = !git a && git c -m
+  fix = !git a && git c --fixup -m
+  sync = "!f() { git co ${1:-master} && git up && git co @{-1} && git rebase --autostash ${1:-master}; }; f" 
+  upstream = "!f() { git f upstream && git co ${1:-master} && git rebase upstream/${1:-master}; }; f"
+  branches = branch -a -vv
+  remotes = remote -v show
+  log = log --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset'
+  logfiles = log  --graph --all --date='short' --format='%h%Cgreen%d%Creset %Cblue%an%Creset %C(white)%ar%Creset %s'
+  alias = !git config -l | grep alias | cut -c 7-
+  bclean = "!f() { git co ${1-master} && git branch --merged ${1:-master} | grep -v " ${1:-master}$" | xargs git branch -d;  }; f" 
+  berase = !git co master && git branch -D
+  amend = c --amend
 [help]
   autocorrect = 1
 [push]
