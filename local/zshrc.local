@@ -14,6 +14,9 @@ function diff {
   dwdiff -3 <(echo $1) <(echo $2)
 }
 
+alias urldecode='python -c "import sys, urllib.parse as ul; print(ul.unquote_plus(sys.argv[1]))"'
+alias urlencode='python -c "import sys, urllib.parse as ul; print(ul.quote_plus(sys.argv[1]))"'
+alias base64encode='python -c "importe base64; print(base64.b64encode(bytes(sys.argv[1])))"'
 # Projets secrets
 # If zshrc.secret exists, load it.
 [ -f ~/.zshrc.secret ] && source ~/.zshrc.secret
