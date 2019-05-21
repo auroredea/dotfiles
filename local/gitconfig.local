@@ -23,13 +23,13 @@
   erase = reset --hard HEAD
   cancel = reset --mixed HEAD
   save = !git a && git c -m
-  fix = !git a && git c --fixup -m
+  fix = !git a && git c --fixup HEAD
   sync = "!f() { git co ${1:-master} && git up && git co @{-1} && git rebase --autostash ${1:-master}; }; f" 
   upstream = "!f() { git f upstream && git co ${1:-master} && git rebase upstream/${1:-master}; }; f"
   branches = branch -a -vv
   remotes = remote -v show
-  log = log --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset'
-  logfiles = log  --graph --all --date='short' --format='%h%Cgreen%d%Creset %Cblue%an%Creset %C(white)%ar%Creset %s'
+  commits = log --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset'
+  tree = log  --graph --all --date='short' --format='%h%Cgreen%d%Creset %Cblue%an%Creset %C(white)%ar%Creset %s'
   alias = !git config -l | grep alias | cut -c 7-
   bclean = "!f() { git co ${1-master} && git branch --merged ${1:-master} | grep -v " ${1:-master}$" | xargs git branch -d;  }; f" 
   berase = !git co master && git branch -D
