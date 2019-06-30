@@ -11,10 +11,7 @@ Plugin 'cohama/lexima.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'vim-airline/vim-airline'
-Plugin 'ensime/ensime-vim'
-
 call vundle#end()            
 
 " les archives sont du filetype zip
