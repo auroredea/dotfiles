@@ -40,7 +40,7 @@ makepkg -si
 # Install zsh and oh-my-zsh
 echo "Installation ZSH avec OH-MY-ZSH\n"
 su root -c 'pacman -S zsh --noconfirm --needed'
-chsh -s $(which zsh)
+chsh -s /bin/zsh
 sh -c "$(curl -fsSL \
   https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
