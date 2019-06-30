@@ -15,13 +15,12 @@ su root -c 'pacman -S base-devel --noconfirm --needed'
 mkdir $HOME/$BIN
 
 # Install useful binaries
-echo "Installation GIT, VIM, JQ, TMUX and GLANCES\n"
+echo "Installation GIT, VIM, JQ, TMUX\n"
 su root -c 'pacman -S git --noconfirm --needed'
 su root -c 'pacman -S vim --noconfirm --needed'
 su root -c 'pacman -S tree --noconfirm --needed'
 su root -c 'pacman -S jq --noconfirm --needed'
 su root -c 'pacman -S tmux --noconfirm --needed'
-su root -c 'pacman -S glances --noconfirm --needed'
 su root -c 'pacman -S the_silver_searcher --noconfirm --needed'
 
 # Clone this repo and change to its directory
