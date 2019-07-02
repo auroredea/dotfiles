@@ -34,6 +34,7 @@
   bclean = "!f() { git co ${1-master} && git branch --merged ${1:-master} | grep -v " ${1:-master}$" | xargs git branch -d;  }; f" 
   berase = !git co master && git branch -D
   amend = c --amend
+  diff = diff --diff-filter=ad --ignore-all-space 
 [help]
   autocorrect = 1
 [push]
