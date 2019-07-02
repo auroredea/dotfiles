@@ -1,5 +1,5 @@
 DISABLE_UPDATE_PROMPT=true
-ZSH_THEME="fishy"
+ZSH_THEME="3den"
 
 COMPLETION_WAITING_DOTS="true"
 
@@ -13,7 +13,6 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -alhF'
 alias l='ls -CF'
-alias glances='glances --disable-folders --disable-sensors'
 alias ip='ip -c'
 alias ps='ps -ef'
 

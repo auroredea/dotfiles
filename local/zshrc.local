@@ -1,14 +1,8 @@
 # User configuration
-export PATH=~/.gem/ruby/2.6.0/bin:~/Applications/diff-so-fancy:$PATH
+export PATH=~/Applications/diff-so-fancy:$PATH
 
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
 
 function diff {
   dwdiff -3 <(echo $1) <(echo $2)
@@ -17,6 +11,7 @@ function diff {
 alias urldecode='python -c "import sys, urllib.parse as ul; print(ul.unquote_plus(sys.argv[1]))"'
 alias urlencode='python -c "import sys, urllib.parse as ul; print(ul.quote_plus(sys.argv[1]))"'
 alias base64encode='python -c "importe base64; print(base64.b64encode(bytes(sys.argv[1])))"'
+
 # Projets secrets
 # If zshrc.secret exists, load it.
 [ -f ~/.zshrc.secret ] && source ~/.zshrc.secret
