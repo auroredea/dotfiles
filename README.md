@@ -19,7 +19,6 @@ sh -c "$(curl -fsSL \
 * [Vundle](https://github.com/VundleVim/Vundle.vim) as your core plugin manager for Vim, and some selected vim plugins (optional).
 * [Zsh](http://www.zsh.org/) as your shell
 * [Oh-my-zsh](http://ohmyz.sh/) as your zsh framework
-* [Tmux](https://github.com/tmux/tmux/wiki) as multiplexer terminal
 * [The silver searcher](https://github.com/ggreer/the_silver_searcher) for a grep/ack ++
 * [Jq](https://stedolan.github.io/jq/) for a "comprehensive" JSON parser on terminal
 * [Diff so fancy](https://github.com/so-fancy/diff-so-fancy) for cool git differences highlights
