@@ -17,3 +17,7 @@ git pull
 # Vundle
 echo "Mise à jour plugins vim"
 vim +PluginUpdate +qall
+
+# Oh-My-Zsh
+cd $HOME/.oh-my-zsh
+git pull --autostash
