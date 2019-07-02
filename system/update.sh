@@ -8,7 +8,7 @@ export BIN=applications
 
 echo "Mise à jour système"
 echo "Please use root password"
-su root -c 'pacman -Syu'
+sudo pacman -Syu
 
 echo "Mise à jour Dotfiles"
 cd $HOME/.dotfiles
@@ -20,4 +20,4 @@ vim +PluginUpdate +qall
 
 # Oh-My-Zsh
 cd $HOME/.oh-my-zsh
-git pull --autostash
+git pull --rebase --autostash
