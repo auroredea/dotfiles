@@ -28,7 +28,6 @@ This configuration can be extended or overriden to suit user-specific
 requirements. You can use my own [local settings](https://github.com/auroredea/dotfiles/tree/master/local). In order to accomplish that, just create and edit the following files:
 * `~/.gitconfig.local`
 * `~/.vimrc.local`
-* `~/.aliases.local`
 * `~/.zshrc.local`
 
 If it already exists in your `$HOME`, each of these files will be automatically included.
