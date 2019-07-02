@@ -8,20 +8,19 @@ export BIN=applications
 
 # Get information on the newest versions of packages and their dependencies.
 echo "Mise à jour des paquets et installation base-devel\n"
-su root -c 'pacman -Syu'
-su root -c 'pacman -S base-devel --noconfirm --needed'
+sudo pacman -Syu
+sudo pacman -S base-devel --noconfirm --needed
 
 # Create BIN directory if no exists
 mkdir $HOME/$BIN
 
 # Install useful binaries
-echo "Installation GIT, VIM, JQ, TMUX\n"
-su root -c 'pacman -S git --noconfirm --needed'
-su root -c 'pacman -S vim --noconfirm --needed'
-su root -c 'pacman -S tree --noconfirm --needed'
-su root -c 'pacman -S jq --noconfirm --needed'
-su root -c 'pacman -S tmux --noconfirm --needed'
-su root -c 'pacman -S the_silver_searcher --noconfirm --needed'
+echo "Installation GIT, VIM, JQ\n"
+sudo pacman -S git --noconfirm --needed
+sudo pacman -S vim --noconfirm --needed
+sudo pacman -S tree --noconfirm --needed
+sudo pacman -S jq --noconfirm --needed
+sudo pacman -S the_silver_searcher --noconfirm --needed
 
 # Clone this repo and change to its directory
 git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
@@ -38,7 +37,7 @@ makepkg -si
 
 # Install zsh and oh-my-zsh
 echo "Installation ZSH avec OH-MY-ZSH\n"
-su root -c 'pacman -S zsh --noconfirm --needed'
+sudo pacman -S zsh --noconfirm --needed
 chsh -s /bin/zsh
 sh -c "$(curl -fsSL \
   https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
