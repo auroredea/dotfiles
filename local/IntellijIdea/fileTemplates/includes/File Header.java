@@ -1,5 +1,0 @@
-/**
- * Class ${NAME}
- * 
- * @author ${USER}
- */
