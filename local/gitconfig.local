@@ -1,6 +1,8 @@
 [user]
   name = Aurore
   email = adeamaral@xebia.fr 
+[credential]
+  helper = cache
 [color]
   branch = true
   ui = true
