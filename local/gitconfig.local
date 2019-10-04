@@ -19,7 +19,7 @@
   ps = push
   st = stash
   m = merge
-  f = fetch
+  f = fetch -p
   up = pl --rebase --autostash
   pick = cherry-pick -x
   erase = reset --hard HEAD
@@ -27,7 +27,7 @@
   save = !git a && git c -m
   fix = !git a && git c --fixup HEAD
   sync = "!f() { git co ${1:-master} && git up && git co @{-1} && git rebase --autostash ${1:-master}; }; f" 
-  upstream = "!f() { git f upstream && git co ${1:-master} && git rebase upstream/${1:-master}; }; f"
+  upstream = "!f() { git f upstream && git co ${1:-master} && git merge upstream/${1:-master}; }; f"
   branches = branch -a -vv
   remotes = remote -v show
   commits = log --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset'
