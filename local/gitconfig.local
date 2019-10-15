@@ -2,7 +2,7 @@
   name = Aurore
   email = adeamaral@xebia.fr 
 [credential]
-  helper = cache
+  helper = store
 [color]
   branch = true
   ui = true
