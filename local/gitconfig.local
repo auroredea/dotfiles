@@ -1,6 +1,7 @@
 [user]
-  name = Aurore
-  email = adeamaral@xebia.fr 
+  name = Aurore de Amaral
+  email = aurore@deamaral.fr
+  signingkey = 9979CFAE4EDD0914
 [credential]
   helper = store
 [color]
