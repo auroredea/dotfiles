@@ -2,8 +2,6 @@
   name = Aurore de Amaral
   email = aurore@deamaral.fr
   signingkey = 9979CFAE4EDD0914
-[credential]
-  helper = store
 [color]
   branch = true
   ui = true
@@ -54,7 +52,7 @@
     useHttpPath = true
 [credential "https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/aiv-infra"]
     helper = !aws --profile sncfirst-dev-aiv codecommit credential-helper $@
-        useHttpPath = true
+    useHttpPath = true
 [credential "https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/locality"]
     helper = !aws --profile sncfirst-dev-aiv codecommit credential-helper $@
     useHttpPath = true 
