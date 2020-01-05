@@ -16,6 +16,11 @@ alias urlencode='python -c "import sys, urllib.parse as ul; print(ul.quote_plus(
 alias base64encode='python -c "importe base64; print(base64.b64encode(bytes(sys.argv[1])))"'
 alias tcpdumphttp='tcpdump -s 0 -A "tcp[((tcp[12:1] & 0xf0) >> 2):4] = 0x47455420"'
 
+# tabtab source for packages
+# uninstall by removing these lines
+# By serverless
+[[ -f ~/.config/tabtab/__tabtab.zsh  ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
 # Projets secrets
 # If zshrc.secret exists, load it.
 [ -f ~/.zshrc.secret ] && source ~/.zshrc.secret
