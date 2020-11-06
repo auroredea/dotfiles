@@ -42,6 +42,13 @@ chsh -s /bin/zsh
 sh -c "$(curl -fsSL \
   https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-echo "\n** Ne pas oublier d'installer ses IDE favoris (et tilix) !"
+# Install pacaur
+echo "Installation PACAUR"
+cd $HOME/$BIN
+git clone git clone https://aur.archlinux.org/pacaur.git
+cd pacaur
+makepkg -si
+
+echo "\n** Ne pas oublier d'installer ses IDE favoris !"
 
 echo "\n*** [OK]"
