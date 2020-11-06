@@ -19,5 +19,6 @@ echo "Mise à jour plugins vim"
 vim +PluginUpdate +qall
 
 # Oh-My-Zsh
+echo "Mise à jour OH-MY-ZSH"
 cd $HOME/.oh-my-zsh
 git checkout master && git pull --rebase --autostash
