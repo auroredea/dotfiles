@@ -12,7 +12,7 @@ sudo pacman -Syu
 
 echo "Mise à jour Dotfiles"
 cd $HOME/.dotfiles
-git pull
+git checkout master && git pull --rebase --autostash
 
 # Vundle
 echo "Mise à jour plugins vim"
@@ -20,4 +20,4 @@ vim +PluginUpdate +qall
 
 # Oh-My-Zsh
 cd $HOME/.oh-my-zsh
-git pull --rebase --autostash
+git checkout master && git pull --rebase --autostash
