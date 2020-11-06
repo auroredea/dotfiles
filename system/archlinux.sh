@@ -15,7 +15,7 @@ sudo pacman -S base-devel --noconfirm --needed
 mkdir $HOME/$BIN
 
 # Install useful binaries
-echo "Installation GIT, VIM, JQ\n"
+echo "Installation GIT, VIM, JQ, TREE, THE SILVER SEARCHER\n"
 sudo pacman -S git --noconfirm --needed
 sudo pacman -S vim --noconfirm --needed
 sudo pacman -S tree --noconfirm --needed
@@ -30,6 +30,7 @@ cd $HOME/.dotfiles || exit
 ./system/symlink_setup.sh
 
 # Installation diff-so-fancy
+echo "Installation DIFF-SO-FANCY"
 cd $HOME/$BIN
 git clone https://aur.archlinux.org/diff-so-fancy-git.git diff-so-fancy
 cd diff-so-fancy
