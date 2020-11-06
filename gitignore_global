@@ -52,3 +52,9 @@ tags
 ehthumbs.db
 Thumbs.db 
 ._*
+
+# nodejs
+/node_modules/
+
+#vscode
+.vscode/
