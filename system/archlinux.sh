@@ -35,12 +35,12 @@ git clone https://aur.archlinux.org/diff-so-fancy-git.git diff-so-fancy
 cd diff-so-fancy
 makepkg -si
 
-# Install zsh and oh-my-zsh
-echo "Installation ZSH avec OH-MY-ZSH\n"
+# Install zsh and ohmyzsh
+echo "Installation ZSH avec OH MY ZSH\n"
 sudo pacman -S zsh --noconfirm --needed
 chsh -s /bin/zsh
 sh -c "$(curl -fsSL \
-  https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install pacaur
 echo "Installation PACAUR"
