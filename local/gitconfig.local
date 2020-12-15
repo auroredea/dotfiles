@@ -9,35 +9,28 @@
   status = true
   log = true
 [alias]
+  alias = !git config -l | grep alias | cut -c 7-
+  branches = branch -a -vv
+  remotes = remote -v show
   a = add -p
+  b = branch
   s = status
   co = checkout
-  c = commit
-  ri = rebase -i --autosquash
+  ci = commit
   pl = pull
   ps = push
   st = stash
-  m = merge
-  f = fetch -p
+  pick = cherry-pick
+  # rebase origin branch
   up = pl --rebase --autostash
-  pick = cherry-pick -x
-  erase = reset --hard HEAD
-  cancel = reset --mixed HEAD
-  save = !git a && git c -m
-  fix = !git a && git c --fixup HEAD
-  sync = "!f() { git co ${1:-master} && git up && git co @{-1} && git rebase --autostash ${1:-master}; }; f" 
-  upstream = "!f() { git f upstream && git co ${1:-master} && git merge upstream/${1:-master}; }; f"
-  branches = branch -a -vv
-  remotes = remote -v show
-  commits = log --name-status --graph --color --format='%C(yellow)%h%Creset %cr -%C(auto)%d%Creset %s %C(blue)[%cn]%Creset'
-  tree = log  --graph --all --date='short' --format='%h%Cgreen%d%Creset %Cblue%an%Creset %C(white)%ar%Creset %s'
-  alias = !git config -l | grep alias | cut -c 7-
-  bclean = "!f() { git co ${1-master} && git branch --merged ${1:-master} | grep -v " ${1:-master}$" | xargs git branch -d;  }; f" 
-  berase = !git co master && git branch -D
-  amend = c --amend
-  diff = diff --diff-filter=ad --ignore-all-space 
-[help]
-  autocorrect = 1
+  # see differences of modified or renamed files before add it
+  diff = diff --diff-filter=MR --ignore-all-space
+  # commit amend, choose it to change commit text, author
+  amend = ci --amend
+  # reduced version of log with tree
+  logs = log --graph --all --format='%C(yellow)%h%Creset %C(bold cyan)(%cr) -%C(auto)%d%Creset %s %C(dim white)[%cn]%Creset'
+  # append modifiers to each commit in the tree
+  tree = log --name-status --graph --format='%C(yellow)%h%Creset %C(bold cyan)(%cr) -%C(auto)%d%Creset %s %C(dim white)[%cn]%Creset'
 [push]
   default = matching
 [core]
@@ -45,14 +38,3 @@
   pager = diff-so-fancy | less --tabs=1,5 -R
   filemode = false
   editor = vim
-[oh-my-zsh]
-  hide-dirty = 1
-[credential "https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/aiv"]
-    helper = !aws --profile sncfirst-dev-aiv codecommit credential-helper $@
-    useHttpPath = true
-[credential "https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/aiv-infra"]
-    helper = !aws --profile sncfirst-dev-aiv codecommit credential-helper $@
-    useHttpPath = true
-[credential "https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/locality"]
-    helper = !aws --profile sncfirst-dev-aiv codecommit credential-helper $@
-    useHttpPath = true 
