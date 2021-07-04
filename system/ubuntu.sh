@@ -10,9 +10,6 @@ export BIN=applications
 echo "Mise à jour des paquets\n"
 sudo apt update
 
-# Create BIN directory if no exists
-mkdir $HOME/$BIN
-
 # Install useful binaries
 echo "Installation GIT, VIM, JQ, TREE, THE SILVER SEARCHER\n"
 sudo apt install git -y
@@ -31,13 +28,13 @@ cd $HOME/.dotfiles || exit
 # Installation diff-so-fancy
 echo "Installation DIFF-SO-FANCY"
 cd $HOME/$BIN
-add-apt-repository -y ppa:aos1/diff-so-fancy
-apt update
-apt install -y diff-so-fancy
+sudo add-apt-repository -y ppa:aos1/diff-so-fancy
+sudo apt update
+sudo apt install -y diff-so-fancy
 
 # Install zsh and ohmyzsh
 echo "Installation ZSH avec OH MY ZSH\n"
-sudo apt install zsh -y
+sudo apt install -y zsh
 chsh -s /bin/zsh
 sh -c "$(curl -fsSL \
   https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
