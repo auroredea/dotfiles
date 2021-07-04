@@ -18,9 +18,6 @@ ln -sf $DOTFILES/gitignore_global $HOME/.gitignore_global
 # zsh
 ln -sf $DOTFILES/zshrc $HOME/.zshrc
 
-# tmux
-ln -sf $DOTFILES/tmux.conf $HOME/.tmux.conf
-
 # adding local files ?
 function localfiles {
  cd $HOME
