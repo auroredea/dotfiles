@@ -25,13 +25,6 @@ cd $HOME/.dotfiles || exit
 # symlink it up!
 ./system/symlink_setup.sh
 
-# Installation diff-so-fancy
-echo "Installation DIFF-SO-FANCY"
-cd $HOME/$BIN
-sudo add-apt-repository -y ppa:aos1/diff-so-fancy
-sudo apt update
-sudo apt install -y diff-so-fancy
-
 # Install zsh and ohmyzsh
 echo "Installation ZSH avec OH MY ZSH\n"
 sudo apt install -y zsh
