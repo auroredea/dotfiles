@@ -27,14 +27,7 @@ git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
 cd $HOME/.dotfiles || exit
 
 # symlink it up!
-./system/symlink_setup.sh
-
-# Installation diff-so-fancy
-echo "Installation DIFF-SO-FANCY"
-cd $HOME/$BIN
-git clone https://aur.archlinux.org/diff-so-fancy-git.git diff-so-fancy
-cd diff-so-fancy
-makepkg -si
+./system/symlink_setup.sh 
 
 # Install zsh and ohmyzsh
 echo "Installation ZSH avec OH MY ZSH\n"
