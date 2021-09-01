@@ -42,6 +42,6 @@
   default = matching
 [core]
   autocrlf = input
-  pager = diff-so-fancy | less --tabs=1,5 -R
+  eol = lf
   filemode = false
   editor = vim
