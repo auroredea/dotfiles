@@ -28,7 +28,6 @@ sh -c "$(curl -fsSL \
 * [Oh-my-zsh](http://ohmyz.sh/) as your zsh framework
 * [The silver searcher](https://github.com/ggreer/the_silver_searcher) for a grep/ack ++
 * [Jq](https://stedolan.github.io/jq/) for a "comprehensive" JSON parser on terminal
-* [Diff so fancy](https://github.com/so-fancy/diff-so-fancy) for cool git differences highlights
 
 ## Local Settings
 This configuration can be extended or overriden to suit user-specific
