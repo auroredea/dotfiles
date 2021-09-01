@@ -2,12 +2,11 @@
   name = Aurore de Amaral
   email = aurore@deamaral.fr
   signingkey = 9979CFAE4EDD0914
-[color]
-  branch = true
-  ui = true
-  diff = true
-  status = true
-  log = true
+[color "status"]
+  added = green bold
+  changed = red bold strike
+  untracked = cyane
+  branch = yellow black bold ul
 [alias]
   alias = !git config -l | grep alias | cut -c 7-
   all = add --all .
