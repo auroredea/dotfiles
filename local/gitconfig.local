@@ -5,7 +5,7 @@
 [color "status"]
   added = green bold
   changed = red bold strike
-  untracked = cyane
+  untracked = cyan
   branch = yellow black bold ul
 [alias]
   alias = !git config -l | grep alias | cut -c 7-
