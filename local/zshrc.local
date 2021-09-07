@@ -1,5 +1,5 @@
 # User configuration
-export PATH=$PATH
+export PATH=~/Applications/:$PATH
 
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
