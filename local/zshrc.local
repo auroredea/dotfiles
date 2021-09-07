@@ -1,8 +1,5 @@
-# Unset BG_NICE of zshrc for WIndows
-unsetopt BG_NICE
-
 # User configuration
-export PATH=~/Applications/diff-so-fancy:~/.gem/ruby/2.6.0/bin:$PATH
+export PATH=$PATH
 
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
