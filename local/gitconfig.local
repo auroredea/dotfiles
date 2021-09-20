@@ -4,7 +4,7 @@
   signingkey = 9979CFAE4EDD0914
 [color "status"]
   added = green bold
-  changed = red bold strike
+  changed = red bold
   untracked = cyan
   branch = yellow black bold ul
 [alias]
@@ -20,17 +20,16 @@
   cp = cherry-pick
   bs = branch -a -vv
   rs = remote -v show
+  # wip commit
+  wip = ci --fixup HEAD
   # fetch & rebase branch (specify name if not current origin branch)
   up = pl --rebase --autostash
   # rebase only and interactively branch (specify name if not current branch)
-  ri = rebase -i --autostash
+  ri = rebase -i --autostash --autosquash
   # see differences of modified or renamed files before add it
   diff = diff --diff-filter=MR --ignore-all-space
   # commit amend, choose it to change commit text, author
   amend = ci --amend
-  # commit with fixup to rebase afterwards
-  wip = ci --fixup
-  fix = ci --fixup
   # push force but rejects if origin have not retrieved commits
   yolo = ps origin HEAD --force-with-lease
   # reduced version of log with tree
