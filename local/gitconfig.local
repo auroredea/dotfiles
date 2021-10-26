@@ -20,6 +20,7 @@
   cp = cherry-pick
   bs = branch -a -vv
   rs = remote -v show
+  oups = reset --soft HEAD^
   # wip commit
   wip = ci --fixup HEAD
   # fetch & rebase branch (specify name if not current origin branch)
