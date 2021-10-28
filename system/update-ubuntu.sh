@@ -9,6 +9,7 @@ export BIN=applications
 echo "Mise à jour système"
 echo "Please use root password"
 sudo apt update
+sudo apt upgrade -y
 
 echo "Mise à jour Dotfiles"
 cd $HOME/.dotfiles
