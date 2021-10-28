@@ -21,6 +21,7 @@ sudo pacman -S vim --noconfirm --needed
 sudo pacman -S tree --noconfirm --needed
 sudo pacman -S jq --noconfirm --needed
 sudo pacman -S the_silver_searcher --noconfirm --needed
+sudo pacman -S dwdiff --noconfirm --needed
 
 # Clone this repo and change to its directory
 git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
