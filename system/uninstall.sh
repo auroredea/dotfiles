@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ################################
-#TESTED WITH ARCH LINUX/MANJARO#
+#TESTED WITH LINUX             #
 ################################
 
 export BIN=applications
