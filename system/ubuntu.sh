@@ -17,6 +17,7 @@ sudo apt install vim -y
 sudo apt install tree -y
 sudo apt install jq -y
 sudo apt install silversearcher-ag -y
+sudo apt install dwdiff -y
 
 # Clone this repo and change to its directory
 git clone https://github.com/auroredea/dotfiles $HOME/.dotfiles
