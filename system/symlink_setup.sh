@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ################################
-# TESTED WITH ARCHLINUX        #
+# TESTED WITH LINUX            #
 ################################
 
 echo "\n Création des symlinks..."
