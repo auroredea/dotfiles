@@ -4,19 +4,10 @@ export PATH=~/Applications/:$PATH
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8
 
-function diff {
-  dwdiff -3 <(echo $1) <(echo $2)
-}
-
-alias urldecode='python3 -c "import sys; from urllib.parse import unquote; print(unquote(sys.argv[1]))"'
-alias urlencode='python3 -c "import sys; from urllib.parse import quote; print(quote(sys.argv[1]))"'
-alias base64encode='python3 -c "import base64; print(base64.b64encode(bytes(sys.argv[1])))"'
-alias tcpdumphttp='tcpdump -s 0 -A "tcp[((tcp[12:1] & 0xf0) >> 2):4] = 0x47455420"'
-
+# NVM configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 autoload -U add-zsh-hook
 load-nvmrc() {
   local node_version="$(nvm version)"
@@ -37,10 +28,22 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+eval "$(direnv hook zsh)"
 
+# JABBA configuration
+export JABBA_HOME="$HOME/.jabba"
 [ -s "$JABBA_HOME/jabba.sh" ] && source "$JABBA_HOME/jabba.sh"
 
-eval "$(direnv hook zsh)"
+# utils
+function diff {
+  dwdiff -3 <(echo $1) <(echo $2)
+}
+
+alias urldecode='python3 -c "import sys; from urllib.parse import unquote; print(unquote(sys.argv[1]))"'
+alias urlencode='python3 -c "import sys; from urllib.parse import quote; print(quote(sys.argv[1]))"'
+alias base64encode='python3 -c "import base64; print(base64.b64encode(bytes(sys.argv[1])))"'
+alias base64decode='python3 -c "import base64; print(base64.b64decode(bytes(sys.argv[1])))"'
+alias tcpdumphttp='tcpdump -s 0 -A "tcp[((tcp[12:1] & 0xf0) >> 2):4] = 0x47455420"'
 
 # Projets secrets
 # If zshrc.secret exists, load it.
