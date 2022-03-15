@@ -34,9 +34,9 @@
   # push force but rejects if origin have not retrieved commits
   yolo = ps origin HEAD --force-with-lease
   # reduced version of log with tree
-  logs = log --graph --all --format='%C(yellow)%h%Creset %C(bold cyan)(%cr) -%C(auto)%d%Creset %s %C(dim white)[%cn]%Creset'
+  tree = log --graph --all --format='%C(yellow)%h%Creset %C(bold cyan)(%cr) -%C(auto)%d%Creset %s %C(dim white)[%cn]%Creset'
   # append modifiers to each commit in the tree
-  tree = log --name-status --graph --format='%C(yellow)%h%Creset %C(bold cyan)(%cr) -%C(auto)%d%Creset %s %C(dim white)[%cn]%Creset'
+  vtree = log --name-status --graph --format='%C(yellow)%h%Creset %C(bold cyan)(%cr) -%C(auto)%d%Creset %s %C(dim white)[%cn]%Creset'
 [push]
   default = matching
 [core]
