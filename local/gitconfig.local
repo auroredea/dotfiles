@@ -12,9 +12,9 @@
   all = add --all .
   b = branch
   s = status
+  f = fetch -p
   co = checkout
   ci = commit
-  pl = pull
   ps = push
   st = stash
   cp = cherry-pick
@@ -23,8 +23,8 @@
   oups = reset --soft HEAD^
   # wip commit
   wip = ci --fixup HEAD
-  # fetch & rebase branch (specify name if not current origin branch)
-  up = pl --rebase --autostash
+  # pull branch (specify name if not current origin branch)
+  up = pull --autostash
   # rebase only and interactively branch (specify name if not current branch)
   ri = rebase -i --autostash --autosquash
   # see differences of modified or renamed files before add it
@@ -37,6 +37,10 @@
   tree = log --graph --all --format='%C(yellow)%h%Creset %C(bold cyan)(%cr) -%C(auto)%d%Creset %s %C(dim white)[%cn]%Creset'
   # append modifiers to each commit in the tree
   vtree = log --name-status --graph --format='%C(yellow)%h%Creset %C(bold cyan)(%cr) -%C(auto)%d%Creset %s %C(dim white)[%cn]%Creset'
+  # delete (prune) old local branches
+  prune-old = !git branch | grep -v master | xargs git branch -D
+[pull]
+  rebase = true
 [push]
   default = matching
 [core]
