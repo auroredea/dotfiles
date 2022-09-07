@@ -1,7 +1,6 @@
-DISABLE_UPDATE_PROMPT=true
-ZSH_THEME="3den"
-
+DISABLE_UPDATE_PROMPT="true"
 COMPLETION_WAITING_DOTS="true"
+ZSH_THEME="3den"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -15,6 +14,9 @@ alias ll='ls -alhF'
 alias l='ls -CF'
 alias ip='ip -c'
 alias ps='ps -ef'
+
+# User configuration
+export PATH=$PATH
 
 # Define custom aliases
 [ -f ~/.aliases.local ] && source ~/.aliases.local
