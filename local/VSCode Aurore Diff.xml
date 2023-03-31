@@ -1,0 +1,90 @@
+<keymap version="1" name="VSCode Aurore Diff" parent="VSCode">
+  <action id="ActivateCommitToolWindow">
+    <keyboard-shortcut first-keystroke="ctrl o" />
+  </action>
+  <action id="ActivateJsonHelperToolWindow">
+    <keyboard-shortcut first-keystroke="ctrl alt g" />
+  </action>
+  <action id="ActivateProjectToolWindow">
+    <keyboard-shortcut first-keystroke="ctrl b" />
+  </action>
+  <action id="ActivateTerminalToolWindow">
+    <keyboard-shortcut first-keystroke="ctrl #10000f9" />
+  </action>
+  <action id="Activatesbt-shell-toolwindowToolWindow">
+    <keyboard-shortcut first-keystroke="shift ctrl #10000f9" />
+  </action>
+  <action id="CloseActiveTab">
+    <keyboard-shortcut first-keystroke="ctrl w" />
+  </action>
+  <action id="CommentByBlockComment">
+    <keyboard-shortcut first-keystroke="shift ctrl colon" />
+  </action>
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="ctrl slash" />
+    <keyboard-shortcut first-keystroke="ctrl colon" />
+  </action>
+  <action id="CompileDirty" />
+  <action id="Console.TableResult.EditValue">
+    <keyboard-shortcut first-keystroke="enter" />
+  </action>
+  <action id="EditorCloneCaretAbove">
+    <keyboard-shortcut first-keystroke="ctrl alt up" />
+  </action>
+  <action id="EditorCloneCaretBelow">
+    <keyboard-shortcut first-keystroke="ctrl alt down" />
+  </action>
+  <action id="Git.Add" />
+  <action id="Git.Branches" />
+  <action id="Git.Commit.And.Push.Executor" />
+  <action id="Git.Log.Branches.Change.Branch.Filter" />
+  <action id="Git.Log.Branches.Navigate.Log.To.Selected.Branch" />
+  <action id="Git.New.Branch.In.Log" />
+  <action id="Git.Rename.Local.Branch" />
+  <action id="Git.Reword.Commit" />
+  <action id="GitNewBranchAction" />
+  <action id="Github.PullRequest.Diff.Comment.Create" />
+  <action id="HideActiveWindow" />
+  <action id="HideSideWindows" />
+  <action id="MoveTabRight">
+    <keyboard-shortcut first-keystroke="ctrl asterisk" />
+  </action>
+  <action id="NextTab">
+    <keyboard-shortcut first-keystroke="ctrl ampersand" />
+  </action>
+  <action id="OpenFile" />
+  <action id="RecentProjectListGroup" />
+  <action id="RenameElement">
+    <keyboard-shortcut first-keystroke="f2" />
+    <keyboard-shortcut first-keystroke="shift f2" />
+  </action>
+  <action id="RenameFile">
+    <keyboard-shortcut first-keystroke="shift ctrl minus" />
+  </action>
+  <action id="Replace">
+    <keyboard-shortcut first-keystroke="ctrl h" />
+    <keyboard-shortcut first-keystroke="ctrl r" />
+  </action>
+  <action id="Scala.MakeExplicit" />
+  <action id="Scala.RenameJavaToScala" />
+  <action id="Scala.ShowImplicits">
+    <keyboard-shortcut first-keystroke="shift ctrl alt equals" />
+    <keyboard-shortcut first-keystroke="shift ctrl alt add" />
+  </action>
+  <action id="SearchEverywhere.NextTab">
+    <keyboard-shortcut first-keystroke="tab" />
+    <keyboard-shortcut first-keystroke="ctrl ampersand" />
+  </action>
+  <action id="SelectAllOccurrences" />
+  <action id="SelectInProjectView" />
+  <action id="SelectNextOccurrence">
+    <keyboard-shortcut first-keystroke="ctrl d" />
+  </action>
+  <action id="ShowIntentionActions">
+    <keyboard-shortcut first-keystroke="ctrl period" />
+    <keyboard-shortcut first-keystroke="alt enter" />
+  </action>
+  <action id="SplitVertically" />
+  <action id="UsageFiltering.ReadAccess" />
+  <action id="org.intellij.plugins.markdown.ui.actions.styling.ToggleBoldAction" />
+</keymap>
