@@ -8,8 +8,8 @@ function diff {
 
 alias urldecode='python3 -c "import sys; from urllib.parse import unquote; print(unquote(sys.argv[1]))"'
 alias urlencode='python3 -c "import sys; from urllib.parse import quote; print(quote(sys.argv[1]))"'
-alias base64encode='python3 -c "import base64; print(base64.b64encode(bytes(sys.argv[1])))"'
-alias base64decode='python3 -c "import base64; print(base64.b64decode(bytes(sys.argv[1])))"'
+alias base64encode=$'python3 -c "import sys; import base64; print(base64.b64encode(bytes(sys.argv[1], \'ascii\')))"'
+alias base64decode=$'python3 -c "import sys; import base64; print(base64.b64decode(bytes(sys.argv[1], \'ascii\')))"'
 alias tcpdumphttp='tcpdump -s 0 -A "tcp[((tcp[12:1] & 0xf0) >> 2):4] = 0x47455420"'
 
 # NVM configuration

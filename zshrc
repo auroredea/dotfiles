@@ -16,7 +16,7 @@ alias ip='ip -c'
 alias ps='ps -ef'
 
 # User configuration
-export PATH=$PATH
+export PATH=~/Postman:~/k9s-app:$PATH
 
 # Define custom aliases
 [ -f ~/.aliases.local ] && source ~/.aliases.local
